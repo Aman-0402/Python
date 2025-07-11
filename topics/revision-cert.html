@@ -1,230 +1,1173 @@
 <div class="quiz-question">
-    <p>You need to complete a function that computes and displays all multiplication table combinations from 2 to 12. How should you complete the code?</p>
-    <pre>
-def times_tables():
-    # 1 -------
-    # 2 ---------
-        print(row * col, end=" ")
-    print()
+    <p><strong>Question</strong></p>
+    <p>Select the incorrect statement.</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) You can pass keyword arguments in any order.</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) You can call a function with positional and keyword arguments.</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Positional arguments must be before keyword arguments in a function call.</li>
+        <li onclick="checkAnswer(this, 'correct')">D) You can pass positional arguments in any order.</li>
+    </ul>
 
-times_tables()
-    </pre>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">
-            A) for col in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for row in range(2, 13):
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            B) for col in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for row in range(2, 13):
-        </li>
-        <li onclick="checkAnswer(this, 'correct')">
-            C) for row in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for col in range(2, 13):
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            D) for row in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for col in range(2, 13):
-        </li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>You develop a Python application for your school. A list named <code>colors</code> contains 500 colors. You need to slice the list to display every other color starting with the second color.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) colors[1:500:2]</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) colors[1:2]</li>
-        <li onclick="checkAnswer(this, 'correct')">C) colors[1::2]</li>
-        <li onclick="checkAnswer(this, 'wrong')">D) colors[2:2]</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>Which data types store numeric values and are created when you assign a value to them?</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) long</li>
-        <li onclick="checkAnswer(this, 'correct')">B) int</li>
-        <li onclick="checkAnswer(this, 'wrong')">C) str</li>
-        <li onclick="checkAnswer(this, 'wrong')">D) bool</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>How many stars (*) does the following snippet print?</p>
-    <pre>
-i = 10
-while i > 0:
-    i -= 3
-    print("*")
-    if i <= 3:
-        break
-else:
-    print("*")
-    </pre>
-    <ul>
-        <li onclick="checkAnswer(this, 'correct')">A) Three</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) The code is erroneous</li>
-        <li onclick="checkAnswer(this, 'wrong')">C) Two</li>
-        <li onclick="checkAnswer(this, 'wrong')">D) One</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>An object variable is a variable that is stored separately in every object.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'correct')">A) True</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) False</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>8. What is the output of the following print statement?</p>
-    <pre>
-S1 = 'Indian Army is our Pride'
-print(len(S1))
-    </pre>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) 25</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) 21</li>
-        <li onclick="checkAnswer(this, 'wrong')">C) 23</li>
-        <li onclick="checkAnswer(this, 'correct')">D) 24</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>You are writing a Python program to calculate the average of marks scored in 3 subjects. Printed output should show decimals truncated to 2 places. Find the missing code line.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">
-            A) print("Your average score of 3 subjects is =" float(Sum/3))
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            B) print("Your average score of 3 subjects is = %f" % Avg)
-        </li>
-        <li onclick="checkAnswer(this, 'correct')">
-            C) print("Your average score of 3 subjects is = %0.2f" % Avg)
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            D) print("Your average score of 3 subjects is =" Avg)
-        </li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>An object cannot contain any references to other objects.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) True</li>
-        <li onclick="checkAnswer(this, 'correct')">B) False</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>What is the output of the following print statement?</p>
-    <pre>
-S1 = 'Indian Army is our Pride'
-print(S1[:19])
-    </pre>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) ""</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) r</li>
-        <li onclick="checkAnswer(this, 'correct')">C) Indian Army is our P</li>
-        <li onclick="checkAnswer(this, 'wrong')">D) Indian Army is our</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>What is the output of the following Python code?</p>
-    <pre>
-Sweet = ["Jaleebi", "darwadpeda", "champakali"]
-print(Sweet * 3)
-    </pre>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) SweetSweetSweet</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) ['Jaleebi', 'darwadpeda', 'champakali']</li>
-        <li onclick="checkAnswer(this, 'correct')">C) ['Jaleebi', 'darwadpeda', 'champakali', 'Jaleebi', 'darwadpeda', 'champakali', 'Jaleebi', 'darwadpeda', 'champakali']</li>
-        <li onclick="checkAnswer(this, 'wrong')">D) [['Jaleebi', 'darwadpeda', 'champakali'], ['Jaleebi', 'darwadpeda', 'champakali'], ['Jaleebi', 'darwadpeda', 'champakali']]</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>The <code>class</code> keyword marks the beginning of the class definition.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) False</li>
-        <li onclick="checkAnswer(this, 'correct')">B) True</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>A constructor is used to instantiate an object.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) False</li>
-        <li onclick="checkAnswer(this, 'correct')">B) True</li>
-    </ul>
-</div>
-<div class="quiz-question">
-    <p>A class may define an object.</p>
-    <ul>
-        <li onclick="checkAnswer(this, 'correct')">A) False</li>
-        <li onclick="checkAnswer(this, 'wrong')">B) True</li>
-    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: You can pass positional arguments in any order. ❌</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>Let's look at each option:</p>
+        
+        <p><strong>❌ You can pass positional arguments in any order.</strong><br>
+        ➤ Incorrect. The order of positional arguments matters because the function assigns them based on their position.<br>
+        <strong>Example:</strong></p>
+        
+        <pre><code>def greet(name, age):
+    print(f"{name} is {age} years old.")
+
+greet("Alice", 25)     # ✅ Correct
+greet(25, "Alice")     # ❌ Incorrect meaning, wrong assignment</code></pre>
+        
+        <p><strong>✅ You can pass keyword arguments in any order.</strong><br>
+        ➤ This is true because keyword arguments are explicitly named, so order doesn't matter.</p>
+        
+        <p><strong>✅ You can call a function with positional and keyword arguments.</strong><br>
+        ➤ Yes, a mix is allowed, but positional must come first.</p>
+        
+        <p><strong>✅ Positional arguments must be before keyword arguments in a function call.</strong><br>
+        ➤ This is correct and mandatory in Python syntax.</p>
+        
+        <p><strong>✅ Final Answer:</strong> You can pass positional arguments in any order.</p>
+    </div>
 </div>
 
 <div class="quiz-question">
-    <p>For the given code, finish the missing line:</p>
-    <pre>
-start = input("How old were you on your start date? ")
-end = input("How old are you today?")
-# Missing line here
-    </pre>
+    <p><strong>Question</strong></p>
+    <p>Select the correct statement about function arguments in Python:</p>
+    
     <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) print("congratulation on" + str(end - int(start)) + "years of service!")</li>
-        <li onclick="checkAnswer(this, 'correct')">B) print("congratulation on" + str(int(end) - int(start)) + "years of service!")</li>
-        <li onclick="checkAnswer(this, 'wrong')">C) print("congratulation on" + int(end - start) + "years of service!")</li>
-        <li onclick="checkAnswer(this, 'wrong')">D) print("congratulation on " + (int(end) - int(start)) + "years of service!")</li>
+        <li onclick="checkAnswer(this, 'wrong')">A) You can pass keyword arguments before positional arguments.</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) All arguments must be keyword arguments.</li>
+        <li onclick="checkAnswer(this, 'correct')">C) You can use both positional and keyword arguments in a single function call.</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) You cannot use positional arguments in Python functions.</li>
     </ul>
-</div>
-<div class="quiz-question">
-    <p>What is the output of the <code>print(type(...))</code> statements in the following Python code?</p>
-    <pre>
-Name = "Boss Baby"
-Age = 2.4
-Male = True
-Female = False
-weight = 15
-UID = 'EBC1233'
 
-print(type(Name))
-print(type(Age))
-print(type(Male))
-print(type(Female))
-print(type(weight))
-print(type(UID))
-    </pre>
-    <ul>
-        <li onclick="checkAnswer(this, 'correct')">
-            A) &lt;class 'str'&gt;<br>
-            &lt;class 'float'&gt;<br>
-            &lt;class 'bool'&gt;<br>
-            &lt;class 'bool'&gt;<br>
-            &lt;class 'int'&gt;<br>
-            &lt;class 'str'&gt;
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            B) &lt;class 'str'&gt;<br>
-            &lt;class 'int'&gt;<br>
-            &lt;class 'bool'&gt;<br>
-            &lt;class 'int'&gt;<br>
-            &lt;class 'float'&gt;<br>
-            &lt;class 'str'&gt;
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            C) &lt;class 'int'&gt;<br>
-            &lt;class 'str'&gt;<br>
-            &lt;class 'bool'&gt;<br>
-            &lt;class 'bool'&gt;<br>
-            &lt;class 'str'&gt;<br>
-            &lt;class 'float'&gt;
-        </li>
-        <li onclick="checkAnswer(this, 'wrong')">
-            D) &lt;class 'str'&gt;<br>
-            &lt;class 'float'&gt;<br>
-            &lt;class 'int'&gt;<br>
-            &lt;class 'int'&gt;<br>
-            &lt;class 'int'&gt;<br>
-            &lt;class 'str'&gt;
-        </li>
-    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C<br>You can use both positional and keyword arguments in a single function call.</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python:</p>
+        <ul>
+            <li>You can mix positional and keyword arguments in a function call.</li>
+            <li>But positional arguments must come first, followed by keyword arguments.</li>
+            <li>So, <code>func(10, b=20)</code> is valid, but <code>func(a=10, 20)</code> is invalid.</li>
+        </ul>
+        
+        <h4>Why other options are wrong:</h4>
+        <ul>
+            <li><strong>A)</strong> Keyword arguments cannot come before positional arguments</li>
+            <li><strong>B)</strong> Functions can accept positional arguments, keyword arguments, or both</li>
+            <li><strong>D)</strong> Python absolutely supports positional arguments</li>
+        </ul>
+    </div>
 </div>
 <div class="quiz-question">
-    <p>Select the code segment(s) that print the output without decimal points.</p>
+    <p><strong>Question</strong></p>
+    <p>Which of the following is not a keyword?</p>
+    
     <ul>
-        <li onclick="checkAnswer(this, 'wrong')">A) average_speed = float(total_distance // time)</li>
-        <li onclick="checkAnswer(this, 'correct')">B) average_speed = total_distance // time</li>
-        <li onclick="checkAnswer(this, 'wrong')">C) average_speed = total_distance / time</li>
-        <li onclick="checkAnswer(this, 'correct')">D) average_speed = int(total_distance / time)</li>
+        <li onclick="checkAnswer(this, 'correct')">A) eval</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) assert</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) nonlocal</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) pass</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: eval</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>Let's analyze each option:</p>
+        
+        <p><strong>eval – ❌ Not a keyword</strong><br>
+        ➤ It is a built-in function, not a keyword.<br>
+        <strong>Example:</strong></p>
+        
+        <pre><code>eval("2 + 3")  # Returns 5</code></pre>
+        
+        <p><strong>assert – ✅ Keyword</strong><br>
+        ➤ Used for debugging to test if a condition is True.</p>
+        
+        <p><strong>nonlocal – ✅ Keyword</strong><br>
+        ➤ Used inside nested functions to refer to variables in the outer (non-global) scope.</p>
+        
+        <p><strong>pass – ✅ Keyword</strong><br>
+        ➤ Used as a placeholder when no action is required.</p>
+        
+        <p><strong>✅ Final Answer:</strong> eval</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is a keyword in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) lambda</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) append</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) index</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) eval</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A. lambda</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <ul>
+            <li><strong>lambda</strong> is a Python keyword used to define anonymous functions.</li>
+            <li><strong>append</strong> and <strong>index</strong> are methods used on lists, not keywords.</li>
+            <li><strong>eval</strong> is a built-in function, not a keyword.</li>
+            <li>Only reserved words defined by Python syntax (like <code>if</code>, <code>else</code>, <code>lambda</code>, <code>def</code>) are considered keywords.</li>
+        </ul>
+        
+        <h4>Example of lambda usage:</h4>
+        <pre><code>square = lambda x: x**2
+print(square(5))  # Outputs 25</code></pre>
+        
+        <h4>Why other options are wrong:</h4>
+        <ul>
+            <li><strong>B) append</strong> - List method (e.g., <code>my_list.append(1)</code>)</li>
+            <li><strong>C) index</strong> - List method (e.g., <code>my_list.index('a')</code>)</li>
+            <li><strong>D) eval</strong> - Built-in function (e.g., <code>eval('2+2')</code>)</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is an invalid statement?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) abc = 1,000,000</li>
+        <li onclick="checkAnswer(this, 'correct')">B) a b c = 1000 2000 3000</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) a,b,c = 1000, 2000, 3000</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) a_b_c = 1,000,000</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: a b c = 1000 2000 3000</h4>
+        
+        <h4>🧠 Explanation of Each Option:</h4>
+        
+        <p><strong>abc = 1,000,000</strong><br>
+        ✅ Valid – This assigns a tuple (1, 0, 0) to abc, due to the commas being interpreted as tuple separators.</p>
+        
+        <p><strong>a b c = 1000 2000 3000</strong><br>
+        ❌ Invalid – Variable names cannot contain spaces. Python will raise a SyntaxError. 
+        Multiple assignment requires commas between variables.</p>
+        
+        <p><strong>a,b,c = 1000, 2000, 3000</strong><br>
+        ✅ Valid – This is tuple unpacking, assigning:<br>
+        a = 1000<br>
+        b = 2000<br>
+        c = 3000</p>
+        
+        <p><strong>a_b_c = 1,000,000</strong><br>
+        ✅ Valid – This assigns the tuple (1, 0, 0) to the variable a_b_c. 
+        Underscores are valid in variable names.</p>
+        
+        <h4>Key Takeaways:</h4>
+        <ul>
+            <li>Variable names cannot contain spaces</li>
+            <li>Commas in numbers don't work as thousand separators in Python</li>
+            <li>Multiple assignment requires commas between variables</li>
+            <li>Underscores are valid in variable names</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is an invalid Python statement?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) x_y_z = 500_000</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) a, b, c = 1, 2, 3</li>
+        <li onclick="checkAnswer(this, 'correct')">C) x y z = 5 10 15</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) x = 1_000_000</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C. x y z = 5 10 15</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p><strong>C is invalid</strong> because variable names cannot contain spaces like <code>x y z</code>.</p>
+        <p>Python throws a <code>SyntaxError</code> when trying to assign values to variables written this way.</p>
+        
+        <h4>Valid Statements:</h4>
+        <ul>
+            <li><strong>A) x_y_z = 500_000</strong> → Underscores allowed in variable names and numbers (PEP 515)</li>
+            <li><strong>B) a, b, c = 1, 2, 3</strong> → Valid tuple unpacking</li>
+            <li><strong>D) x = 1_000_000</strong> → Underscores can be used for readability in large numbers</li>
+        </ul>
+        
+        <h4>Key Python Rules:</h4>
+        <ol>
+            <li>Variable names can't contain spaces</li>
+            <li>Underscores are valid in variable names</li>
+            <li>Underscores in numbers are ignored (for readability)</li>
+            <li>Multiple assignment requires commas between variables</li>
+        </ol>
+        
+        <h4>Error Example:</h4>
+        <pre><code>>>> x y z = 5 10 15
+  File "<stdin>", line 1
+    x y z = 5 10 15
+      ^
+SyntaxError: invalid syntax</code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the order of precedence in Python?</p>
+    <ol type="i">
+        <li>Parentheses</li>
+        <li>Exponential</li>
+        <li>Multiplication</li>
+        <li>Division</li>
+        <li>Addition</li>
+        <li>Subtraction</li>
+    </ol>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) i, ii, iii, iv, v, vi</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) ii, i, iii, iv, v, vi</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) ii, i, iv, iii, v, vi</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) i, ii, iii, iv, vi, v</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: i, ii, iii, iv, v, vi</h4>
+        
+        <h4>🧠 Explanation: Order of Precedence in Python (from highest to lowest):</h4>
+        <ol type="i">
+            <li><strong>Parentheses → ()</strong><br>
+            ➤ Used to override default precedence</li>
+            <li><strong>Exponential → **</strong></li>
+            <li><strong>Multiplication → *</strong></li>
+            <li><strong>Division → /, //, %</strong></li>
+            <li><strong>Addition → +</strong></li>
+            <li><strong>Subtraction → -</strong></li>
+        </ol>
+        
+        <h4>Example:</h4>
+        <pre><code>result = (3 + 2) ** 2 * 4 / 2 - 1
+# Steps:
+1. (3+2) = 5    (Parentheses first)
+2. 5**2 = 25    (Exponentiation)
+3. 25*4 = 100   (Multiplication)
+4. 100/2 = 50   (Division)
+5. 50-1 = 49    (Subtraction last)</code></pre>
+        
+        <h4>Key Points:</h4>
+        <ul>
+            <li>Multiplication and Division have same precedence (left to right)</li>
+            <li>Addition and Subtraction have same precedence (left to right)</li>
+            <li>Use parentheses to explicitly define evaluation order</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the correct order of precedence in Python?</p>
+    <ol type="i">
+        <li>Parentheses</li>
+        <li>Exponentiation (**)</li>
+        <li>Multiplication / Division</li>
+        <li>Addition / Subtraction</li>
+    </ol>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) i, ii, iii, iv</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) ii, i, iii, iv</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) i, iii, ii, iv</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) i, ii, iv, iii</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A. i, ii, iii, iv</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>Python follows this order of precedence for arithmetic operators:</p>
+        <ol>
+            <li><strong>Parentheses ()</strong> – evaluated first</li>
+            <li><strong>Exponentiation **</strong></li>
+            <li><strong>Multiplication * / Division / / Floor division // / Modulus %</strong></li>
+            <li><strong>Addition + / Subtraction -</strong></li>
+        </ol>
+        
+        <p>So: <strong>i → ii → iii → iv</strong> is the correct sequence.</p>
+        
+        <h4>Practical Example:</h4>
+        <pre><code>result = (5 + 3) ** 2 * 4 / 2 - 1
+# Evaluation steps:
+1. (5 + 3) = 8       (Parentheses first)
+2. 8 ** 2 = 64       (Exponentiation)
+3. 64 * 4 = 256      (Multiplication)
+4. 256 / 2 = 128     (Division)
+5. 128 - 1 = 127     (Subtraction last)</code></pre>
+        
+        <h4>Key Notes:</h4>
+        <ul>
+            <li>Operators with same precedence (like * and /) evaluate left-to-right</li>
+            <li>Parentheses always have highest precedence</li>
+            <li>Exponentiation comes before other arithmetic operations</li>
+            <li>Use parentheses to make complex expressions clearer</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+    <pre><code>str1 = "helloworld"
+str1[::-1]</code></pre>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) dlrowolleh</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) hello</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) world</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) helloworld</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: dlrowolleh</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The code uses Python's string slicing with <code>[::-1]</code> which means:</p>
+        <ul>
+            <li>Start from the end of the string</li>
+            <li>Move backwards with step -1</li>
+            <li>This effectively reverses the string</li>
+        </ul>
+        
+        <h4>Breakdown of the slicing syntax:</h4>
+        <pre><code>[start:stop:step]
+# When step is negative, it goes backwards
+# Empty start/stop means "whole string"</code></pre>
+        
+        <h4>Example Output:</h4>
+        <pre><code>>>> str1 = "helloworld"
+>>> str1[::-1]
+'dlrowolleh'</code></pre>
+        
+        <h4>Other Common String Operations:</h4>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Example</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Get first 5 chars</td>
+                <td><code>str1[:5]</code></td>
+                <td>'hello'</td>
+            </tr>
+            <tr>
+                <td>Get last 5 chars</td>
+                <td><code>str1[-5:]</code></td>
+                <td>'world'</td>
+            </tr>
+            <tr>
+                <td>Every 2nd character</td>
+                <td><code>str1[::2]</code></td>
+                <td>'hlool'</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+    <pre><code>text = "PythonRocks"
+print(text[::2])</code></pre>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) PtoRc</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) yhnok</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Python</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) ytoRc</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A. PtoRc</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p><code>text[::2]</code> means: start from index 0, go till the end, and take every 2nd character.</p>
+        
+        <h4>Step-by-Step Breakdown:</h4>
+        <p>From "PythonRocks":</p>
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Character</th>
+                <th>Selected</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>P</td>
+                <td>✅ (P)</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>y</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>t</td>
+                <td>✅ (t)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>h</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>o</td>
+                <td>✅ (o)</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>n</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>R</td>
+                <td>✅ (R)</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>o</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>c</td>
+                <td>✅ (c)</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>k</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>s</td>
+                <td>❌</td>
+            </tr>
+        </table>
+        
+        <p>Result: <strong>'PtoRc'</strong></p>
+        
+        <h4>Comparison with Previous Example:</h4>
+        <p>Unlike <code>str1[::-1]</code> which reverses the string, <code>[::2]</code> takes every other character.</p>
+        
+        <h4>Other Common Slicing Patterns:</h4>
+        <pre><code>text[1::2]    # 'yhnok' (starts at index 1, then every 2nd)
+text[::-1]    # 'skcoRnohtyP' (reverse)
+text[3:8:2]   # 'hoR' (from index 3-7, every 2nd)</code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following code:</p>
+    <pre><code>print(9//2)</code></pre>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 4.5</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 4.0</li>
+        <li onclick="checkAnswer(this, 'correct')">C) 4</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C. 4</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p><code>//</code> is the <strong>floor division</strong> operator in Python.</p>
+        <p>It performs division and returns the largest whole number (integer) less than or equal to the result.</p>
+        
+        <h4>Calculation:</h4>
+        <pre><code>9 ÷ 2 = 4.5
+Floor of 4.5 = 4</code></pre>
+        
+        <h4>Key Points:</h4>
+        <ul>
+            <li>Floor division always returns an integer, even with floating-point inputs</li>
+            <li>Regular division (<code>/</code>) would return 4.5</li>
+            <li>Different from modulo (<code>%</code>) which gives the remainder</li>
+        </ul>
+        
+        <h4>More Examples:</h4>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Result</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td><code>11 // 3</code></td>
+                <td>3</td>
+                <td>11 ÷ 3 = 3.666 → floor is 3</td>
+            </tr>
+            <tr>
+                <td><code>-5 // 2</code></td>
+                <td>-3</td>
+                <td>-5 ÷ 2 = -2.5 → floor is -3</td>
+            </tr>
+            <tr>
+                <td><code>7.5 // 2</code></td>
+                <td>3.0</td>
+                <td>Result is float when inputs include floats</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following code:</p>
+    <pre><code>print(10 // 3)</code></pre>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 3.33</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 3.0</li>
+        <li onclick="checkAnswer(this, 'correct')">C) 3</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C. 3</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p><code>//</code> is the <strong>floor division</strong> operator in Python.</p>
+        <p>It returns the largest integer less than or equal to the division result.</p>
+        
+        <h4>Calculation:</h4>
+        <pre><code>10 ÷ 3 = 3.333...
+Floor of 3.333... = 3</code></pre>
+        
+        <h4>Key Characteristics:</h4>
+        <ul>
+            <li>Returns an <strong>integer</strong> when both operands are integers</li>
+            <li>Different from regular division (<code>/</code>) which returns a float</li>
+            <li>Rounds <em>down</em> to the nearest whole number</li>
+            <li>Works with negative numbers (rounds toward negative infinity)</li>
+        </ul>
+        
+        <h4>Comparison with Other Operators:</h4>
+        <table>
+            <tr>
+                <th>Operation</th>
+                <th>Example</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Regular Division</td>
+                <td><code>10 / 3</code></td>
+                <td>3.333...</td>
+            </tr>
+            <tr>
+                <td>Floor Division</td>
+                <td><code>10 // 3</code></td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Modulo</td>
+                <td><code>10 % 3</code></td>
+                <td>1 (remainder)</td>
+            </tr>
+        </table>
+        
+        <h4>Practical Applications:</h4>
+        <ul>
+            <li>When you need whole units (e.g., dividing people into groups)</li>
+            <li>Calculating page counts where fractions don't make sense</li>
+            <li>Any integer division scenario where remainders aren't needed</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which function overloads the >> operator?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) more()</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) gt()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) ge()</li>
+        <li onclick="checkAnswer(this, 'correct')">D) None of the above</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D. None of the above</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, operator overloading is done by defining special methods (also known as magic methods or dunder methods).</p>
+        
+        <p>The <code>>></code> (right shift) operator is overloaded using:</p>
+        <pre><code>__rshift__(self, other)</code></pre>
+        
+        <h4>Analysis of Options:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Evaluation</th>
+                <th>Correct Method</th>
+            </tr>
+            <tr>
+                <td>A) more()</td>
+                <td>❌ Not a special method</td>
+                <td>Doesn't exist</td>
+            </tr>
+            <tr>
+                <td>B) gt()</td>
+                <td>❌ Incorrect name</td>
+                <td><code>__gt__()</code> (for > operator)</td>
+            </tr>
+            <tr>
+                <td>C) ge()</td>
+                <td>❌ Incorrect name</td>
+                <td><code>__ge__()</code> (for >= operator)</td>
+            </tr>
+            <tr>
+                <td>D) None</td>
+                <td>✅ Correct</td>
+                <td>The right method is <code>__rshift__()</code></td>
+            </tr>
+        </table>
+        
+        <h4>Common Operator Overloading Methods:</h4>
+        <ul>
+            <li><code>__add__()</code> for + operator</li>
+            <li><code>__sub__()</code> for - operator</li>
+            <li><code>__mul__()</code> for * operator</li>
+            <li><code>__rshift__()</code> for >> operator</li>
+            <li><code>__lshift__()</code> for << operator</li>
+        </ul>
+        
+        <h4>Example Implementation:</h4>
+        <pre><code>class Data:
+    def __rshift__(self, other):
+        print(f"Right shift with {other}")
+
+d = Data()
+d >> 5  # Output: Right shift with 5</code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which special method is used to overload the + operator in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) __add__()</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) __plus__()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) __sum__()</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) __concat__()</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A. __add__()</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>Python supports operator overloading using special methods (also called dunder methods).</p>
+        
+        <p>For the <code>+</code> operator, the method is:</p>
+        <pre><code>__add__(self, other)</code></pre>
+        
+        <h4>Comparison with Original Question:</h4>
+        <p>For the <code>>></code> operator (from previous question), the method is <code>__rshift__()</code>, making "None of the above" the correct answer there.</p>
+        
+        <h4>Common Operator Overloading Methods:</h4>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Method</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>__add__()</td>
+                <td>a + b</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>__sub__()</td>
+                <td>a - b</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>__mul__()</td>
+                <td>a * b</td>
+            </tr>
+            <tr>
+                <td>>></td>
+                <td>__rshift__()</td>
+                <td>a >> b</td>
+            </tr>
+        </table>
+        
+        <h4>Example Implementation:</h4>
+        <pre><code>class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+v1 = Vector(1, 2)
+v2 = Vector(3, 4)
+v3 = v1 + v2  # Uses __add__ method</code></pre>
+        
+        <h4>Key Points:</h4>
+        <ul>
+            <li>Special methods always have double underscores (dunder)</li>
+            <li>__add__() is called when + operator is used</li>
+            <li>Can return any type (not limited to same class)</li>
+            <li>Should implement __radd__() for reverse operations</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which operator is overloaded by the <code>__or__()</code> function?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) ||</li>
+        <li onclick="checkAnswer(this, 'correct')">B) |</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) //</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) /</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) |</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, the <code>__or__()</code> special method overloads the bitwise OR operator <code>|</code>.</p>
+        
+        <h4>Key Points:</h4>
+        <ul>
+            <li><code>__or__()</code> is called when the <code>|</code> operator is used</li>
+            <li>Not to be confused with logical OR (which uses <code>or</code> keyword)</li>
+            <li>Python doesn't have <code>||</code> operator like some other languages</li>
+        </ul>
+        
+        <h4>Comparison of Operators:</h4>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Method</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><code>|</code></td>
+                <td>__or__()</td>
+                <td>Bitwise OR</td>
+            </tr>
+            <tr>
+                <td><code>or</code></td>
+                <td>Cannot be overloaded</td>
+                <td>Logical OR</td>
+            </tr>
+            <tr>
+                <td><code>//</code></td>
+                <td>__floordiv__()</td>
+                <td>Floor division</td>
+            </tr>
+            <tr>
+                <td><code>/</code></td>
+                <td>__truediv__()</td>
+                <td>True division</td>
+            </tr>
+        </table>
+        
+        <h4>Example Implementation:</h4>
+        <pre><code>class Flags:
+    def __init__(self, value):
+        self.value = value
+        
+    def __or__(self, other):
+        return Flags(self.value | other.value)
+
+f1 = Flags(0b01)
+f2 = Flags(0b10)
+result = f1 | f2  # Uses __or__ method
+print(bin(result.value))  # Output: 0b11</code></pre>
+        
+        <h4>Common Uses:</h4>
+        <ul>
+            <li>Bitwise operations</li>
+            <li>Combining sets or flags</li>
+            <li>Custom OR-like behavior for objects</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which operator is overloaded by the <code>__and__()</code> function in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) &&</li>
+        <li onclick="checkAnswer(this, 'correct')">B) &</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) and</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) |</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) &</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, the <code>__and__()</code> special method overloads the bitwise AND operator <code>&</code>.</p>
+        
+        <h4>Key Points:</h4>
+        <ul>
+            <li><code>__and__()</code> is called when the <code>&</code> operator is used</li>
+            <li>Not to be confused with logical AND (which uses <code>and</code> keyword)</li>
+            <li>Python doesn't have <code>&&</code> operator like some other languages</li>
+            <li>The <code>and</code> keyword cannot be overloaded</li>
+        </ul>
+        
+        <h4>Comparison of Operators:</h4>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Method</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><code>&</code></td>
+                <td>__and__()</td>
+                <td>Bitwise AND</td>
+            </tr>
+            <tr>
+                <td><code>and</code></td>
+                <td>Cannot be overloaded</td>
+                <td>Logical AND</td>
+            </tr>
+            <tr>
+                <td><code>|</code></td>
+                <td>__or__()</td>
+                <td>Bitwise OR</td>
+            </tr>
+        </table>
+        
+        <h4>Example Implementation:</h4>
+        <pre><code>class Bitmask:
+    def __init__(self, value):
+        self.value = value
+        
+    def __and__(self, other):
+        return Bitmask(self.value & other.value)
+
+b1 = Bitmask(0b1010)
+b2 = Bitmask(0b1100)
+result = b1 & b2  # Uses __and__ method
+print(bin(result.value))  # Output: 0b1000</code></pre>
+        
+        <h4>Common Uses:</h4>
+        <ul>
+            <li>Bitwise operations and masking</li>
+            <li>Custom AND-like behavior for objects</li>
+            <li>Implementing set intersections</li>
+        </ul>
+        
+        <h4>Note About Original Question:</h4>
+        <p>For the <code>or</code> case mentioned earlier, <code>__or__()</code> overloads the <code>|</code> operator, not any <code>or()</code> function.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of these is not a core data type in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Lists</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Dictionary</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Tuples</li>
+        <li onclick="checkAnswer(this, 'correct')">D) Class</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D) Class</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>Python's core (built-in) data types include:</p>
+        <ul>
+            <li>Numbers: <code>int</code>, <code>float</code>, <code>complex</code></li>
+            <li><code>str</code> → String</li>
+            <li><code>list</code> → Ordered, mutable collection</li>
+            <li><code>tuple</code> → Ordered, immutable collection</li>
+            <li><code>dict</code> → Key-value mapping</li>
+            <li><code>set</code> → Unordered collection of unique elements</li>
+            <li><code>bool</code> → Boolean values (<code>True</code>/<code>False</code>)</li>
+        </ul>
+        
+        <h4>Analysis of Options:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>A) Lists</td>
+                <td>✅ Core</td>
+                <td>Mutable sequence: <code>[1, 2, 3]</code></td>
+            </tr>
+            <tr>
+                <td>B) Dictionary</td>
+                <td>✅ Core</td>
+                <td>Key-value pairs: <code>{'a': 1, 'b': 2}</code></td>
+            </tr>
+            <tr>
+                <td>C) Tuples</td>
+                <td>✅ Core</td>
+                <td>Immutable sequence: <code>(1, 2, 3)</code></td>
+            </tr>
+            <tr>
+                <td>D) Class</td>
+                <td>❌ Not core</td>
+                <td>User-defined blueprint for objects</td>
+            </tr>
+        </table>
+        
+        <h4>Key Differences:</h4>
+        <ul>
+            <li><strong>Core types</strong> are built into Python and always available</li>
+            <li><strong>Classes</strong> are user-defined and used in object-oriented programming</li>
+            <li>Core types are implemented as classes in Python, but they're special built-in ones</li>
+        </ul>
+        
+        <h4>Example of Class Definition:</h4>
+        <pre><code>class Person:  # This is a class, not a core data type
+    def __init__(self, name):
+        self.name = name
+
+p = Person("Alice")  # Creating an object</code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is a core data type in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Object</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Class</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Set</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Module</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) Set</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>Python's core (built-in) data types include:</p>
+        <ul>
+            <li>Numeric types: <code>int</code>, <code>float</code>, <code>complex</code></li>
+            <li>Text type: <code>str</code></li>
+            <li>Sequence types: <code>list</code>, <code>tuple</code>, <code>range</code></li>
+            <li>Mapping type: <code>dict</code></li>
+            <li>Set types: <code>set</code>, <code>frozenset</code></li>
+            <li>Boolean type: <code>bool</code></li>
+        </ul>
+        
+        <h4>Analysis of Options:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>A) Object</td>
+                <td>❌ OOP Concept</td>
+                <td>Instance of a class, not a core data type</td>
+            </tr>
+            <tr>
+                <td>B) Class</td>
+                <td>❌ OOP Concept</td>
+                <td>Blueprint for creating objects</td>
+            </tr>
+            <tr>
+                <td>C) Set</td>
+                <td>✅ Core</td>
+                <td>Unordered collection: <code>{1, 2, 3}</code></td>
+            </tr>
+            <tr>
+                <td>D) Module</td>
+                <td>❌ Import System</td>
+                <td>File containing Python code, not a data type</td>
+            </tr>
+        </table>
+        
+        <h4>Key Differences:</h4>
+        <ul>
+            <li><strong>Core types</strong> are fundamental building blocks of Python</li>
+            <li><strong>Set</strong> is an unordered collection of unique elements</li>
+            <li>Classes and objects are part of OOP, not basic data types</li>
+            <li>Modules are organizational units, not data types</li>
+        </ul>
+        
+        <h4>Set Example:</h4>
+        <pre><code>fruits = {"apple", "banana", "cherry"}  # Core set type
+print(type(fruits))  # Output: &lt;class 'set'&gt;</code></pre>
+        
+        <h4>Note About Previous Question:</h4>
+        <p>In the original question, <code>Class</code> was correctly identified as <em>not</em> being a core data type.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What data type is the object below?<br><code>L = [1, 23, 'hello', 1]</code></p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) List</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Tuple</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Dictionary</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Array</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) List</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The object <code>L = [1, 23, 'hello', 1]</code> is enclosed in square brackets <code>[]</code>, which is the syntax for a <strong>list</strong> in Python.</p>
+        
+        <h4>Key Characteristics of Lists:</h4>
+        <ul>
+            <li>Enclosed in square brackets <code>[]</code></li>
+            <li>Can contain elements of different data types</li>
+            <li>Allows duplicate values</li>
+            <li>Mutable (can be changed after creation)</li>
+            <li>Ordered (maintains insertion order)</li>
+        </ul>
+        
+        <h4>Comparison with Other Options:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Syntax</th>
+                <th>Key Difference</th>
+            </tr>
+            <tr>
+                <td>B) Tuple</td>
+                <td><code>(1, 23, 'hello', 1)</code></td>
+                <td>Uses parentheses, immutable</td>
+            </tr>
+            <tr>
+                <td>C) Dictionary</td>
+                <td><code>{'key1': 1, 'key2': 23}</code></td>
+                <td>Requires key-value pairs</td>
+            </tr>
+            <tr>
+                <td>D) Array</td>
+                <td><code>array('i', [1, 23])</code></td>
+                <td>Requires importing array module, homogeneous types</td>
+            </tr>
+        </table>
+        
+        <h4>List Operations Example:</h4>
+        <pre><code>L = [1, 23, 'hello', 1]
+print(type(L))  # Output: &lt;class 'list'&gt;
+L.append('world')  # Lists are mutable
+print(L)  # Output: [1, 23, 'hello', 1, 'world']</code></pre>
+        
+        <h4>Why Not Array?</h4>
+        <ul>
+            <li>Python lists can hold mixed types, arrays cannot</li>
+            <li>Arrays require importing a module (<code>import array</code>)</li>
+            <li>Lists are more flexible for general use</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What data type is the object below?<br><code>T = (10, 20, 'world', 10)</code></p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) List</li>
+        <li onclick="checkAnswer(this, 'correct')">B) Tuple</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Dictionary</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Set</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) Tuple</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The object <code>T = (10, 20, 'world', 10)</code> is enclosed in parentheses <code>()</code>, which is the syntax for a <strong>tuple</strong> in Python.</p>
+        
+        <h4>Key Characteristics of Tuples:</h4>
+        <ul>
+            <li>Enclosed in parentheses <code>()</code></li>
+            <li>Can contain elements of different data types</li>
+            <li>Allows duplicate values</li>
+            <li>Immutable (cannot be changed after creation)</li>
+            <li>Ordered (maintains insertion order)</li>
+            <li>Generally faster than lists</li>
+        </ul>
+        
+        <h4>Comparison with Other Options:</h4>
+        <table>
+            <tr>
+                <th>Data Type</th>
+                <th>Syntax</th>
+                <th>Key Difference</th>
+            </tr>
+            <tr>
+                <td>List</td>
+                <td><code>[10, 20, 'world', 10]</code></td>
+                <td>Uses square brackets, mutable</td>
+            </tr>
+            <tr>
+                <td>Dictionary</td>
+                <td><code>{'a': 10, 'b': 20}</code></td>
+                <td>Uses curly braces with key-value pairs</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td><code>{10, 20, 'world'}</code></td>
+                <td>Uses curly braces, only unique elements</td>
+            </tr>
+        </table>
+        
+        <h4>Tuple Operations Example:</h4>
+        <pre><code>T = (10, 20, 'world', 10)
+print(type(T))  # Output: &lt;class 'tuple'&gt;
+print(T[1])     # Output: 20 (indexing works)
+# T[1] = 30    # Would raise error - tuples are immutable</code></pre>
+        
+        <h4>When to Use Tuples vs Lists:</h4>
+        <ul>
+            <li>Use tuples for fixed collections that shouldn't change</li>
+            <li>Use lists for collections that need modification</li>
+            <li>Tuples are preferred for dictionary keys (as they're immutable)</li>
+        </ul>
+        
+        <h4>Note About Original Question:</h4>
+        <p>In the previous question, <code>L = [1, 23, 'hello', 1]</code> was a list because it used square brackets <code>[]</code>.</p>
+    </div>
 </div>
