@@ -65,6 +65,38 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Copy protection - prevent text copying except for quiz/MCQ content
+// and allow short selections (<=50 chars)
+document.addEventListener('copy', function(event) {
+  const selection = window.getSelection();
+  const selectedText = selection.toString().trim();
+
+  let isQuizContent = false;
+  if (selection.rangeCount > 0) {
+    let node = selection.getRangeAt(0).commonAncestorContainer;
+    if (node.nodeType !== 1) node = node.parentElement;
+    if (
+      node.closest('.quiz-question') ||
+      node.closest('.answer') ||
+      node.closest('ul') ||
+      selectedText.length <= 50
+    ) {
+      isQuizContent = true;
+    }
+  }
+
+  if (isQuizContent) {
+    // Allow normal copying for quiz/MCQ content or short selections
+    return;
+  }
+
+  // Prevent copying for other content
+  event.preventDefault();
+  event.clipboardData.setData('text/plain', "🙄 Oh, so you thought copying was the shortcut?\n" +
+    "Newsflash: The only thing you're pasting is regret.\n" +
+    "Now go type it like a real student. 😏");
+});
+
 // Compiler functionality
 function initializeCompiler() {
   const codeEditor = document.getElementById('python-code');
