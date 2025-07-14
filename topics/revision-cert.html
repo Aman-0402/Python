@@ -1,3 +1,4 @@
+<h1>Chapter 1: Introduction to Python</h1>
 <div class="quiz-question">
     <p><strong>Question 1</strong></p>
     <p>Select the incorrect statement.</p>
@@ -1236,5 +1237,1075 @@ print(type(num))  # Output: &lt;class 'float'&gt;</code></pre>
     price = float("$3.50")  # Will raise ValueError
 except ValueError:
     print("Invalid number format")</code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following functions converts a number to a string in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) float(x)</li>
+        <li onclick="checkAnswer(this, 'correct')">B) str(x)</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) int(x)</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) bool(x)</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) str(x)</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>str()</code> function converts any object (including numbers) into its string representation.</p>
+        
+        <h4>Example Usage:</h4>
+        <pre><code>num = 42
+text = str(num)  # Converts to string "42"
+print(type(text))  # Output: &lt;class 'str'&gt;</code></pre>
+        
+        <h4>Analysis of Options:</h4>
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Purpose</th>
+                <th>Example</th>
+                <th>Result Type</th>
+            </tr>
+            <tr>
+                <td><code>float(x)</code></td>
+                <td>Converts to floating-point</td>
+                <td><code>float(3) → 3.0</code></td>
+                <td>float</td>
+            </tr>
+            <tr>
+                <td><code>str(x)</code></td>
+                <td>Converts to string</td>
+                <td><code>str(3.14) → "3.14"</code></td>
+                <td>str</td>
+            </tr>
+            <tr>
+                <td><code>int(x)</code></td>
+                <td>Converts to integer</td>
+                <td><code>int(3.9) → 3</code></td>
+                <td>int</td>
+            </tr>
+            <tr>
+                <td><code>bool(x)</code></td>
+                <td>Converts to boolean</td>
+                <td><code>bool(1) → True</code></td>
+                <td>bool</td>
+            </tr>
+        </table>
+        
+        <h4>Key Features of str():</h4>
+        <ul>
+            <li>Works with all Python data types (numbers, lists, dictionaries, etc.)</li>
+            <li>Essential for string concatenation: <code>"Value: " + str(42)</code></li>
+            <li>Used implicitly in <code>print()</code> function</li>
+            <li>Can specify encoding for bytes conversion</li>
+        </ul>
+        
+        <h4>Comparison with Original Question:</h4>
+        <p>Previously, <code>float(x)</code> was the correct answer for converting strings to numbers - the inverse of this operation.</p>
+        
+        <h4>Practical Example:</h4>
+        <pre><code># Converting different types to strings
+print(str(10))       # "10"
+print(str(3.14))     # "3.14"
+print(str(True))     # "True"
+print(str([1,2]))    # "[1, 2]"</code></pre>
+    </div>
+</div>
+<br>
+<br>
+<h1>Chapter 2: Deep Dive into Python</h1>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following statements is used to create an empty set in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) { }</li>
+        <li onclick="checkAnswer(this, 'correct')">B) set()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) [ ]</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) ( )</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) set()</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, you must use the <code>set()</code> constructor to create an empty set.</p>
+        
+        <h4>Why Other Options Are Incorrect:</h4>
+        <table>
+            <tr>
+                <th>Syntax</th>
+                <th>Creates</th>
+                <th>Reason</th>
+            </tr>
+            <tr>
+                <td><code>{ }</code></td>
+                <td>Empty dictionary</td>
+                <td>Curly braces without contents default to dict</td>
+            </tr>
+            <tr>
+                <td><code>[ ]</code></td>
+                <td>Empty list</td>
+                <td>Square brackets always create lists</td>
+            </tr>
+            <tr>
+                <td><code>( )</code></td>
+                <td>Empty tuple</td>
+                <td>Parentheses create tuples</td>
+            </tr>
+        </table>
+        
+        <h4>Example:</h4>
+        <pre><code>empty_set = set()
+print(type(empty_set))  # Output: &lt;class 'set'&gt;
+print(empty_set)        # Output: set()</code></pre>
+        
+        <h4>Creating Non-Empty Sets:</h4>
+        <pre><code># For non-empty sets, use curly braces with elements
+numbers = {1, 2, 3}
+print(type(numbers))  # Output: &lt;class 'set'&gt;</code></pre>
+        
+        <h4>Key Characteristics of Sets:</h4>
+        <ul>
+            <li>Unordered collection</li>
+            <li>Contains only unique elements</li>
+            <li>Mutable (can add/remove items)</li>
+            <li>Can perform set operations (union, intersection, etc.)</li>
+        </ul>
+        
+        <h4>Common Pitfall:</h4>
+        <p>Many beginners try <code>{}</code> to create an empty set, but this actually creates a dictionary. Always use <code>set()</code> for empty sets.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is used to create an empty dictionary in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) {}</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) set()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) []</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) ()</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) {}</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, curly braces <code>{}</code> by default create an empty dictionary.</p>
+        
+        <h4>Comparison with Other Options:</h4>
+        <table>
+            <tr>
+                <th>Syntax</th>
+                <th>Creates</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td><code>{}</code></td>
+                <td>Empty dictionary</td>
+                <td>Default behavior of empty curly braces</td>
+            </tr>
+            <tr>
+                <td><code>set()</code></td>
+                <td>Empty set</td>
+                <td>Correct way to make empty sets (from original question)</td>
+            </tr>
+            <tr>
+                <td><code>[]</code></td>
+                <td>Empty list</td>
+                <td>Square brackets always create lists</td>
+            </tr>
+            <tr>
+                <td><code>()</code></td>
+                <td>Empty tuple</td>
+                <td>Parentheses create tuples</td>
+            </tr>
+        </table>
+        
+        <h4>Example:</h4>
+        <pre><code>empty_dict = {}
+print(type(empty_dict))  # Output: &lt;class 'dict'&gt;
+print(empty_dict)        # Output: {}</code></pre>
+        
+        <h4>Creating Non-Empty Dictionaries:</h4>
+        <pre><code># For non-empty dictionaries, use key-value pairs
+student = {"name": "Alice", "age": 20}
+print(type(student))  # Output: &lt;class 'dict'&gt;</code></pre>
+        
+        <h4>Key Dictionary Characteristics:</h4>
+        <ul>
+            <li>Unordered collection (Python 3.7+ maintains insertion order)</li>
+            <li>Key-value pairs</li>
+            <li>Keys must be immutable (strings, numbers, tuples)</li>
+            <li>Mutable (can add/remove items)</li>
+        </ul>
+        
+        <h4>Important Distinction:</h4>
+        <p>While <code>{1, 2, 3}</code> creates a set, <code>{}</code> alone creates a dictionary. This is why <code>set()</code> is needed for empty sets.</p>
+        
+        <h4>Connection to Original Question:</h4>
+        <p>In your previous question, <code>set()</code> was the correct way to create an empty set, while here <code>{}</code> is correct for dictionaries.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is used to create an empty dictionary in Python?</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) {}</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) set()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) []</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) ()</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) {}</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, curly braces <code>{}</code> by default create an empty dictionary.</p>
+        
+        <h4>Comparison with Other Options:</h4>
+        <table>
+            <tr>
+                <th>Syntax</th>
+                <th>Creates</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td><code>{}</code></td>
+                <td>Empty dictionary</td>
+                <td>Default behavior of empty curly braces</td>
+            </tr>
+            <tr>
+                <td><code>set()</code></td>
+                <td>Empty set</td>
+                <td>Correct way to make empty sets (from original question)</td>
+            </tr>
+            <tr>
+                <td><code>[]</code></td>
+                <td>Empty list</td>
+                <td>Square brackets always create lists</td>
+            </tr>
+            <tr>
+                <td><code>()</code></td>
+                <td>Empty tuple</td>
+                <td>Parentheses create tuples</td>
+            </tr>
+        </table>
+        
+        <h4>Example:</h4>
+        <pre><code>empty_dict = {}
+print(type(empty_dict))  # Output: &lt;class 'dict'&gt;
+print(empty_dict)        # Output: {}</code></pre>
+        
+        <h4>Creating Non-Empty Dictionaries:</h4>
+        <pre><code># For non-empty dictionaries, use key-value pairs
+student = {"name": "Alice", "age": 20}
+print(type(student))  # Output: &lt;class 'dict'&gt;</code></pre>
+        
+        <h4>Key Dictionary Characteristics:</h4>
+        <ul>
+            <li>Unordered collection (Python 3.7+ maintains insertion order)</li>
+            <li>Key-value pairs</li>
+            <li>Keys must be immutable (strings, numbers, tuples)</li>
+            <li>Mutable (can add/remove items)</li>
+        </ul>
+        
+        <h4>Important Distinction:</h4>
+        <p>While <code>{1, 2, 3}</code> creates a set, <code>{}</code> alone creates a dictionary. This is why <code>set()</code> is needed for empty sets.</p>
+        
+        <h4>Connection to Original Question:</h4>
+        <p>In your previous question, <code>set()</code> was the correct way to create an empty set, while here <code>{}</code> is correct for dictionaries.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+    
+    <pre><code>
+a = {4, 5, 6}
+b = {4, 5, 6}
+print(a.issubset(b))
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) True</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) False</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Error</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) No output</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) True</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>issubset()</code> method checks whether all elements of set <code>a</code> are present in set <code>b</code>.</p>
+        <p>Since both <code>a</code> and <code>b</code> have the same elements <code>{4, 5, 6}</code>, <code>a</code> is considered a subset of <code>b</code>. Hence, the method returns <code>True</code>.</p>
+        
+        <h4>Comparison with Related Concept:</h4>
+        <table>
+            <tr>
+                <th>Expression</th>
+                <th>Result</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td><code>{1, 2}.issubset({1, 2, 3})</code></td>
+                <td>True</td>
+                <td>All elements in first set exist in the second</td>
+            </tr>
+            <tr>
+                <td><code>{1, 4}.issubset({1, 2, 3})</code></td>
+                <td>False</td>
+                <td>Element 4 is missing in the second set</td>
+            </tr>
+            <tr>
+                <td><code>s.issubset(s)</code></td>
+                <td>True</td>
+                <td>Any set is always a subset of itself</td>
+            </tr>
+        </table>
+
+        <h4>Example:</h4>
+        <pre><code>
+s1 = {1, 2, 3}
+print(s1.issubset(s1))  # Output: True
+        </code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>issubset()</code> returns a boolean value</li>
+            <li>Set A is a subset of B if all elements in A exist in B</li>
+            <li>Every set is a subset of itself</li>
+        </ul>
+
+        <h4>Important Distinction:</h4>
+        <p><code>a.issubset(b)</code> checks for inclusion, not identity. Even if two sets are identical, the method returns <code>True</code> because all elements of <code>a</code> are in <code>b</code>.</p>
+
+        <h4>Connection to Related Questions:</h4>
+        <p>Earlier, you asked about <code>{}</code> creating a dictionary and <code>set()</code> creating a set. This is another example of set operations in Python.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following Python code?</p>
+    
+    <pre><code>
+for i in range(float('inf')):
+    print(i)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 0.0 0.1 0.2 0.3...</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 0 1 2 3...</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 0.0 1.0 2.0 3.0...</li>
+        <li onclick="checkAnswer(this, 'correct')">D) none of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D) none of the mentioned</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>range()</code> function in Python requires integer arguments. However, <code>float('inf')</code> returns a float that represents positive infinity, which is not an integer.</p>
+        <p>So when you try to execute:</p>
+
+        <pre><code>
+for i in range(float('inf')):
+    print(i)
+        </code></pre>
+
+        <p>You will get the following error:</p>
+        <pre><code>TypeError: 'float' object cannot be interpreted as an integer</code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>range()</code> only accepts integer values (int, not float).</li>
+            <li><code>float('inf')</code> is a float representing mathematical infinity.</li>
+            <li>Passing a float to <code>range()</code> always raises a <code>TypeError</code>.</li>
+        </ul>
+
+        <h4>Example Fix:</h4>
+        <pre><code>
+# Incorrect
+range(float('inf'))  # ❌ Error
+
+# Correct: Use a very large integer if you want an infinite-like loop
+import itertools
+for i in itertools.count():
+    print(i)  # ✅ Will print indefinitely starting from 0
+        </code></pre>
+
+        <h4>Important Distinction:</h4>
+        <p>Using <code>float('inf')</code> in loops or index-based operations that expect integers is a common beginner mistake. Always validate types when using built-in functions like <code>range()</code>.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following Python code?</p>
+    
+    <pre><code>
+for i in range('10'):
+    print(i)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 0 1 2 3 4 5 6 7 8 9</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 10</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Error</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) None of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) Error</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>range()</code> function in Python requires an integer as its argument. However, in this code, a string <code>'10'</code> is passed instead of an integer.</p>
+        <p>This results in a <code>TypeError</code> because Python cannot interpret a string as an integer in the context of <code>range()</code>.</p>
+
+        <h4>Actual Error:</h4>
+        <pre><code>TypeError: 'str' object cannot be interpreted as an integer</code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>range()</code> requires integer input</li>
+            <li>Passing a string (even if it looks like a number) will raise a TypeError</li>
+            <li>Always convert string inputs to integers using <code>int()</code> before passing to <code>range()</code></li>
+        </ul>
+
+        <h4>Corrected Example:</h4>
+        <pre><code>
+for i in range(int('10')):
+    print(i)  # Output: 0 1 2 3 4 5 6 7 8 9
+        </code></pre>
+
+        <h4>Connection to Previous Question:</h4>
+        <p>Just like <code>float('inf')</code> caused a <code>TypeError</code> because it’s a float, <code>'10'</code> here causes a <code>TypeError</code> because it's a string — both are invalid for <code>range()</code>.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+    
+    <pre><code>
+True = False
+while True:
+    print(True)
+    break
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) True</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) False</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) None</li>
+        <li onclick="checkAnswer(this, 'correct')">D) none of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D) none of the mentioned</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In this code, you are trying to assign <code>False</code> to the literal keyword <code>True</code> using the line:</p>
+        <pre><code>True = False</code></pre>
+        <p>However, <code>True</code> and <code>False</code> are Python built-in constants (keywords), and **you cannot assign a value to them**. Doing so will raise a <code>SyntaxError</code>.</p>
+
+        <h4>Actual Error:</h4>
+        <pre><code>SyntaxError: cannot assign to True</code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>True</code> and <code>False</code> are immutable boolean constants in Python</li>
+            <li>Assignment to these literals is not allowed</li>
+            <li>Doing so results in a compile-time <code>SyntaxError</code>, not a runtime error</li>
+        </ul>
+
+        <h4>What If It Were Valid?</h4>
+        <p>If Python allowed this (it doesn’t), it would cause logical confusion. For example:</p>
+        <pre><code>
+True = False
+while True:  # This would become while False
+    print(True)  # Would print False
+    break
+        </code></pre>
+        <p>But again, Python prevents this kind of behavior to maintain the integrity of the language.</p>
+
+        <h4>Connection to Previous Questions:</h4>
+        <p>This is similar in nature to passing <code>float('inf')</code> or <code>'10'</code> to <code>range()</code> — all are examples of **type violations** or **invalid syntax usage**.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+    
+    <pre><code>
+False = True
+if False:
+    print("Hello")
+else:
+    print("World")
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Hello</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) World</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Error</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) None of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) Error</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>In Python 3.x, <code>True</code> and <code>False</code> are reserved keywords representing boolean values.</p>
+        <p>Attempting to assign a new value to them — like <code>False = True</code> — is **not allowed** and results in a <code>SyntaxError</code>.</p>
+
+        <h4>Actual Error:</h4>
+        <pre><code>SyntaxError: cannot assign to False</code></pre>
+
+        <h4>Why This Happens:</h4>
+        <ul>
+            <li><code>True</code> and <code>False</code> are not just variables — they are built-in constants</li>
+            <li>You cannot reassign them to other values</li>
+            <li>This prevents bugs and logical confusion in your code</li>
+        </ul>
+
+        <h4>Incorrect Assumption:</h4>
+        <pre><code>
+# If it were allowed (it's not):
+False = True  # ❌ Invalid
+if False:     # Actually means 'if True' (if it worked)
+    print("Hello")
+else:
+    print("World")
+        </code></pre>
+        <p>But this code will never run because the assignment is illegal.</p>
+
+        <h4>Connection to Previous Questions:</h4>
+        <p>Similar to your earlier question using <code>True = False</code> in a <code>while</code> loop — Python will throw a <code>SyntaxError</code> as soon as it encounters the invalid assignment.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>To open a file <code>c:\file.txt</code> for appending data, we use ____________</p>
+    
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) outfile = open("c:\\file.txt", "a")</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) outfile = open("c:\\file.txt", "rw")</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) outfile = open(file = "c:\file.txt", "w")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) outfile = open(file = "c:\\file.txt", "w")</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) outfile = open("c:\\file.txt", "a")</h4>
+        
+        <h4>🧠 Explanation:</h4>
+        <p>To open a file for **appending** in Python, you use the <code>"a"</code> mode:</p>
+        <pre><code>
+open("filename", "a")
+        </code></pre>
+        <ul>
+            <li><code>"a"</code> stands for "append" mode.</li>
+            <li>Appends data to the end of the file without removing existing content.</li>
+            <li>The double backslash <code>\\</code> is required to escape the backslash in Windows file paths.</li>
+        </ul>
+
+        <h4>Breakdown of Options:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Explanation</th>
+                <th>Valid?</th>
+            </tr>
+            <tr>
+                <td><code>open("c:\\file.txt", "a")</code></td>
+                <td>Appends data to file – ✅ Correct</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>open("c:\\file.txt", "rw")</code></td>
+                <td><code>"rw"</code> is not a valid mode in Python</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td><code>open(file = "c:\file.txt", "w")</code></td>
+                <td>Invalid path string due to unescaped <code>\f</code></td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td><code>open(file = "c:\\file.txt", "w")</code></td>
+                <td>Valid path but opens in write mode (overwrites)</td>
+                <td>❌</td>
+            </tr>
+        </table>
+
+        <h4>Reminder:</h4>
+        <ul>
+            <li><code>"w"</code> – Write mode (overwrites)</li>
+            <li><code>"r"</code> – Read mode</li>
+            <li><code>"a"</code> – Append mode ✅</li>
+            <li><code>"r+"</code> – Read and write</li>
+        </ul>
+
+        <h4>Correct Usage Example:</h4>
+        <pre><code>
+outfile = open("c:\\file.txt", "a")
+outfile.write("This will be added to the end of the file.")
+outfile.close()
+        </code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>To open a file <code>d:\data.txt</code> for reading, we use ____________</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) file = open("d:\\data.txt", "r")</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) file = open("d:\\data.txt", "w")</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) file = open("d:\\data.txt", "a")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) file = open("d:\\data.txt", "rw")</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) file = open("d:\\data.txt", "r")</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>To open a file for reading in Python, you use the <code>"r"</code> mode, which is the **default mode** for the <code>open()</code> function.</p>
+        
+        <h4>Breakdown of Options:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Mode</th>
+                <th>Effect</th>
+                <th>Valid?</th>
+            </tr>
+            <tr>
+                <td><code>open("d:\\data.txt", "r")</code></td>
+                <td>Read</td>
+                <td>Opens file for reading</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>open("d:\\data.txt", "w")</code></td>
+                <td>Write</td>
+                <td>Opens file for writing (overwrites if exists)</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>open("d:\\data.txt", "a")</code></td>
+                <td>Append</td>
+                <td>Opens file for appending at end</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>open("d:\\data.txt", "rw")</code></td>
+                <td>Invalid</td>
+                <td><code>"rw"</code> is not a valid Python mode</td>
+                <td>❌</td>
+            </tr>
+        </table>
+
+        <h4>Note:</h4>
+        <ul>
+            <li>Always escape backslashes in Windows file paths using <code>\\</code></li>
+            <li><code>"r"</code> mode throws an error if the file doesn't exist</li>
+        </ul>
+
+        <h4>Correct Usage Example:</h4>
+        <pre><code>
+file = open("d:\\data.txt", "r")
+content = file.read()
+print(content)
+file.close()
+        </code></pre>
+
+        <h4>Connection to Previous Question:</h4>
+        <p>Just like <code>"a"</code> mode is used for appending, <code>"r"</code> is used for reading. Always choose the mode based on what operation you want to perform on the file.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code snippet?</p>
+
+    <pre><code>
+string = "my name is x"
+
+for i in ' '.join(string.split()):
+    print(i, end=", ")
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) m, y, , n, a, m, e, , i, s, , x,</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) m, y, , n, a, m, e, , i, s, , x</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) my, name, is, x,</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) error</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) m, y, , n, a, m, e, , i, s, , x,</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>Let’s break it down step-by-step:</p>
+
+        <ol>
+            <li><code>string.split()</code> → <code>['my', 'name', 'is', 'x']</code></li>
+            <li><code>' '.join(...)</code> → <code>'my name is x'</code></li>
+            <li>The <code>for</code> loop iterates over each character in the string <code>'my name is x'</code></li>
+            <li><code>print(i, end=", ")</code> → prints each character followed by a comma and space</li>
+        </ol>
+
+        <h4>So it prints:</h4>
+        <pre><code>m, y,  , n, a, m, e,  , i, s,  , x, </code></pre>
+
+        <p>Final output (with commas):</p>
+        <pre><code>m, y, , n, a, m, e, , i, s, , x,</code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>split()</code> splits by spaces</li>
+            <li><code>' '.join()</code> puts the list back into a single string with single spaces</li>
+            <li>The loop prints each character individually</li>
+        </ul>
+
+        <h4>Bonus Tip:</h4>
+        <p>If you had written <code>print(i)</code> instead of <code>print(i, end=", ")</code>, it would have printed one character per line.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+    <pre><code>
+text = "hello world"
+for i in '-'.join(text.split()):
+    print(i, end="*")
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) h*e*l*l*o*-*w*o*r*l*d*</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) helloworld</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) hello world</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) error</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) h*e*l*l*o*-*w*o*r*l*d*</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>Let's analyze the code step-by-step:</p>
+
+        <pre><code>
+text = "hello world"
+text.split()            ➝ ['hello', 'world']
+'-'.join(...)           ➝ "hello-world"
+</code></pre>
+
+        <p>Then, the <code>for</code> loop iterates over each character of the string <code>"hello-world"</code> and prints each followed by <code>*</code>.</p>
+
+        <h4>So the output is:</h4>
+        <pre><code>h*e*l*l*o*-*w*o*r*l*d*</code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>split()</code> turns the string into a list of words</li>
+            <li><code>'-'.join()</code> joins the list back with hyphens</li>
+            <li>The <code>for</code> loop prints each character with an asterisk after it</li>
+        </ul>
+
+        <h4>Visual Breakdown:</h4>
+        <table>
+            <tr><th>Operation</th><th>Result</th></tr>
+            <tr><td><code>text.split()</code></td><td><code>['hello', 'world']</code></td></tr>
+            <tr><td><code>'-'.join(...)</code></td><td><code>"hello-world"</code></td></tr>
+            <tr><td>Character iteration</td><td><code>h*e*l*l*o*-*w*o*r*l*d*</code></td></tr>
+        </table>
+
+        <h4>Connection to Related Question:</h4>
+        <p>Similar to the <code>' '.join(string.split())</code> example with <code>end=", "</code>, this question demonstrates character-wise output formatting using a separator (in this case, <code>*</code>).</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+    <pre><code>
+a = ["Apple", "Ball", "Cobra"]
+a.sort(key=len)
+print(a)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) ['Apple', 'Ball', 'Cobra']</li>
+        <li onclick="checkAnswer(this, 'correct')">B) ['Ball', 'Apple', 'Cobra']</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) ['Cobra', 'Apple', 'Ball']</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Invalid syntax for sort()</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) ['Ball', 'Apple', 'Cobra']</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>sort()</code> function sorts the list in-place.</p>
+        <p>Using <code>key=len</code> tells Python to sort based on the **length** of each string:</p>
+
+        <ul>
+            <li>"Apple" → length 5</li>
+            <li>"Ball" → length 4</li>
+            <li>"Cobra" → length 5</li>
+        </ul>
+
+        <p>Sorted by length (ascending):</p>
+        <pre><code>['Ball', 'Apple', 'Cobra']</code></pre>
+
+        <p>Note that "Apple" and "Cobra" are both of length 5, so their **relative order is preserved** (Python uses a stable sort).</p>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>sort(key=len)</code> – sorts based on the return value of <code>len()</code></li>
+            <li>Stable sort – maintains relative order of equal elements</li>
+        </ul>
+
+        <h4>Common Mistake:</h4>
+        <p>Thinking <code>sort()</code> sorts alphabetically by default (which it does), but <code>key=len</code> changes that behavior to sort by length.</p>
+
+        <h4>Output:</h4>
+        <pre><code>['Ball', 'Apple', 'Cobra']</code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+    <pre><code>
+fruits = ["Kiwi", "Banana", "Fig"]
+fruits.sort(key=len)
+print(fruits)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) ['Kiwi', 'Banana', 'Fig']</li>
+        <li onclick="checkAnswer(this, 'correct')">B) ['Fig', 'Kiwi', 'Banana']</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) ['Banana', 'Kiwi', 'Fig']</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Invalid syntax for sort()</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) ['Fig', 'Kiwi', 'Banana']</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>sort()</code> method with <code>key=len</code> sorts the list based on the **length** of each string (from shortest to longest).</p>
+
+        <h4>String Lengths:</h4>
+        <ul>
+            <li>"Fig" → 3</li>
+            <li>"Kiwi" → 4</li>
+            <li>"Banana" → 6</li>
+        </ul>
+
+        <h4>Sorted List by Length:</h4>
+        <pre><code>['Fig', 'Kiwi', 'Banana']</code></pre>
+
+        <h4>Key Concepts:</h4>
+        <ul>
+            <li><code>key=len</code> tells Python to sort by the number of characters in each item</li>
+            <li>This is a stable sort — if two items had the same length, their original order would be preserved</li>
+        </ul>
+
+        <h4>Connection to Related Question:</h4>
+        <p>Previously, <code>a = ["Apple", "Ball", "Cobra"]</code> sorted by length gave <code>['Ball', 'Apple', 'Cobra']</code> because "Ball" had the shortest length.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+    <pre><code>
+a = [1, 5, 7, 9, 9, 1]
+b = a[0]
+x = 0
+for x in range(1, len(a)):
+    if a[x] > b:
+        b = a[x]
+        b = x
+print(b)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 5</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 3</li>
+        <li onclick="checkAnswer(this, 'correct')">C) 4</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 0</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) 4</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>Let’s walk through the code step by step:</p>
+
+        <pre><code>
+Initial list: a = [1, 5, 7, 9, 9, 1]
+Start with:
+    b = a[0] = 1
+</code></pre>
+
+        <p>Now we loop through the list from index 1 to 5:</p>
+
+        <table>
+            <tr>
+                <th>x</th>
+                <th>a[x]</th>
+                <th>b (before)</th>
+                <th>a[x] > b?</th>
+                <th>b (after b = a[x])</th>
+                <th>b (after b = x)</th>
+            </tr>
+            <tr><td>1</td><td>5</td><td>1</td><td>✅</td><td>5</td><td>1</td></tr>
+            <tr><td>2</td><td>7</td><td>1</td><td>✅</td><td>7</td><td>2</td></tr>
+            <tr><td>3</td><td>9</td><td>2</td><td>✅</td><td>9</td><td>3</td></tr>
+            <tr><td>4</td><td>9</td><td>3</td><td>✅</td><td>9</td><td>4</td></tr>
+            <tr><td>5</td><td>1</td><td>4</td><td>❌</td><td>–</td><td>4</td></tr>
+        </table>
+
+        <h4>Key Detail:</h4>
+        <p>The line <code>b = a[x]</code> is immediately overwritten by <code>b = x</code>, so you're not storing the **value**, you're keeping the **index** of the max value seen so far.</p>
+
+        <h4>Final Output:</h4>
+        <pre><code>4</code></pre>
+
+        <h4>Important Concept:</h4>
+        <p>This code finds the index of the last occurrence of the maximum value in the list.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+    <pre><code>
+nums = [3, 8, 2, 8, 10]
+max_val = nums[0]
+for i in range(1, len(nums)):
+    if nums[i] > max_val:
+        max_val = i
+print(max_val)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 10</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 4</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 8</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 3</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) 4</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The programmer intended to track the maximum <strong>value</strong> but accidentally stores the <strong>index</strong> instead.</p>
+
+        <h4>Let's Trace the Code:</h4>
+        <ul>
+            <li>Initial list: <code>[3, 8, 2, 8, 10]</code></li>
+            <li><code>max_val = nums[0]</code> → <code>3</code></li>
+        </ul>
+
+        <h4>Iteration Trace:</h4>
+        <table>
+            <tr><th>i</th><th>nums[i]</th><th>Condition</th><th>max_val</th></tr>
+            <tr><td>1</td><td>8</td><td>8 > 3 → ✅</td><td>max_val = 1</td></tr>
+            <tr><td>2</td><td>2</td><td>2 > 1 → ❌</td><td>unchanged</td></tr>
+            <tr><td>3</td><td>8</td><td>8 > 1 → ✅</td><td>max_val = 3</td></tr>
+            <tr><td>4</td><td>10</td><td>10 > 3 → ✅</td><td>max_val = 4</td></tr>
+        </table>
+
+        <p><strong>Important:</strong> The condition compares the value <code>nums[i]</code> to <code>max_val</code>, but <code>max_val</code was updated with index values like 1, 3, etc., not actual list elements.</p>
+
+        <p>Thus, <strong>final value printed is the index of the max value</strong> → <code>4</code></p>
+
+        <h4>Correct Way (if we wanted actual max value):</h4>
+        <pre><code>
+max_val = nums[0]
+for i in range(1, len(nums)):
+    if nums[i] > max_val:
+        max_val = nums[i]
+print(max_val)  # Output: 10
+        </code></pre>
+    </div>
+</div>
+<br>
+<br>
+<h1>Final Question</h1>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of the following is <strong>incorrect</strong> in Python?</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) float('inf')</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) float('nan')</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) float('56' + '78')</li>
+        <li onclick="checkAnswer(this, 'correct')">D) float('12+34')</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D) float('12+34')</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>Valid?</th>
+            </tr>
+            <tr>
+                <td><code>float('inf')</code></td>
+                <td>Valid – Converts to positive infinity</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>float('nan')</code></td>
+                <td>Valid – Converts to NaN (Not a Number)</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>float('56' + '78')</code></td>
+                <td>'56' + '78' = '5678' → float('5678') = 5678.0</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td><code>float('12+34')</code></td>
+                <td>Invalid – Contains non-numeric characters ('+')</td>
+                <td>❌ Raises <code>ValueError</code></td>
+            </tr>
+        </table>
+
+        <h4>📌 Important Note:</h4>
+        <p>The <code>float()</code> function only accepts strings that are valid numeric representations like <code>"3.14"</code>, <code>"inf"</code>, <code>"nan"</code>, etc.</p>
+
+        <h4>Output of Invalid Code:</h4>
+        <pre><code>
+>>> float("12+34")
+ValueError: could not convert string to float: '12+34'
+        </code></pre>
     </div>
 </div>
