@@ -2990,7 +2990,743 @@ print(max_val)  # Output: 10
       </code></pre>
     </div>
   </div>
-        
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following will result in an error?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. <code>>>> p = re.compile("d") >>> p.search("door")</code></li>
+      <li onclick="checkAnswer(this, 'wrong')">B. <code>>>> p = re.escape('hello')</code></li>
+      <li onclick="checkAnswer(this, 'correct')">C. <code>>>> p = re.subn()</code></li>
+      <li onclick="checkAnswer(this, 'wrong')">D. <code>>>> p = re.purge()</code></li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C. <code>>>> p = re.subn()</code></h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <ul>
+        <li><strong>A:</strong> ✅ Valid. <code>re.compile()</code> compiles a regex, and <code>search()</code> searches the string. No error.</li>
+        <li><strong>B:</strong> ✅ Valid. <code>re.escape()</code> returns a string with all non-alphanumeric characters backslashed. No error.</li>
+        <li><strong>C:</strong> ❌ <strong>Invalid.</strong> <code>re.subn()</code> requires at least 3 arguments: pattern, replacement, and string. Calling it with no arguments causes a <code>TypeError</code>.</li>
+        <li><strong>D:</strong> ✅ Valid. <code>re.purge()</code> clears the regex cache. No arguments needed, no error.</li>
+      </ul>
+  
+      <p><strong>Therefore, only Option C results in an error.</strong></p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p>What will be the output of the following Python code?</p>
+  
+    <pre><code>import re
+  re.findall('hello world','hello',1)</code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. ["hello"]</li>
+      <li onclick="checkAnswer(this, 'correct')">B. [ ]</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. hello</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. hello world</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. [ ]</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>re.findall()</code> function expects the first argument to be a pattern and the second to be the string to search in.</p>
+      <p>Here, the code is incorrectly ordered:</p>
+      <pre><code>re.findall('hello world', 'hello', 1)</code></pre>
+      <p>This tries to find matches of the string <code>'hello world'</code> within <code>'hello'</code>, which obviously doesn't match.</p>
+      <p>So, it returns an empty list: <code>[]</code>.</p>
+  
+      <p><strong>Note:</strong> Even though this code uses the optional flags parameter (3rd argument = 1), it doesn’t affect the result here.</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h1>Chapter 6: Regression (Use Case Study)</h1>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>A process by which we estimate the value of dependent variable on the basis of one or more independent variables is called:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Correlation</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Regression</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Residual</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Slope</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Regression</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Regression</strong> is a statistical method used for estimating the relationships among variables.</p>
+      <p>It allows us to predict the value of a <strong>dependent variable</strong> based on the value(s) of one or more <strong>independent variables</strong>.</p>
+      <p>For example, predicting a student's marks based on hours studied is a case of simple linear regression.</p>
+  
+      <ul>
+        <li><strong>Correlation</strong> measures the strength and direction of a relationship but does not imply prediction.</li>
+        <li><strong>Residual</strong> is the difference between the actual and predicted value.</li>
+        <li><strong>Slope</strong> is a component of the regression line equation, not the process itself.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>The method of least squares dictates that we choose a regression line where the sum of the square of deviations of the points from the line is:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Maximum</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Minimum</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Zero</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Positive</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Minimum</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <strong>method of least squares</strong> is a standard approach in regression analysis that minimizes the sum of the squares of the vertical deviations (errors) between the observed values and the values predicted by the linear model.</p>
+      <p>Mathematically, it finds the line of best fit by minimizing:</p>
+      <pre>∑(Actual Value - Predicted Value)²</pre>
+      <p>This ensures the line is as close as possible to all data points, making it the most accurate linear prediction.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>All data points falling along a straight line is called:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. Linear relationship</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Non linear relationship</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Residual</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Scatter diagram</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. Linear relationship</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>A <strong>linear relationship</strong> means that the data points lie along a straight line. In such a relationship, the change in the dependent variable is directly proportional to the change in the independent variable.</p>
+      <p>Mathematically, it's represented as: <code>y = mx + c</code>, where <code>m</code> is the slope and <code>c</code> is the intercept.</p>
+      <p>✅ When all data points fall perfectly on this line, the relationship is considered perfectly linear.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>If the value of any regression coefficient is zero, then two variables are:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Qualitative</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Correlation</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Dependent</li>
+      <li onclick="checkAnswer(this, 'correct')">D. Independent</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D. Independent</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>In a regression equation, the regression coefficient represents the strength and type of relationship between the independent and dependent variables.</p>
+      <p>If the coefficient is zero, it means that the independent variable has no effect on the dependent variable — there is no linear relationship between them.</p>
+      <p>➡️ Thus, the variables are considered <strong>independent</strong>.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which module in Python supports regular expressions?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. re</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. regex</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. pyregex</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. None of the mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. re</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>Python's standard library includes the <code>re</code> module for working with regular expressions.</p>
+      <p>It provides functions like <code>match()</code>, <code>search()</code>, <code>findall()</code>, and more.</p>
+      <p>Other names like <strong>regex</strong> or <strong>pyregex</strong> are not standard modules in Python.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following creates a pattern object?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. re.create(str)</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. re.regex(str)</li>
+      <li onclick="checkAnswer(this, 'correct')">C. re.compile(str)</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. re.assemble(str)</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C. re.compile(str)</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>re.compile()</code> function in Python’s <code>re</code> module compiles a regular expression pattern into a pattern object.</p>
+      <p>This pattern object can be reused for matching, searching, and other operations.</p>
+      <p>None of the other functions listed (<code>re.create</code>, <code>re.regex</code>, <code>re.assemble</code>) exist in the <code>re</code> module.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>What does the function <code>re.match</code> do?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. matches a pattern at the start of the string</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. matches a pattern at any position in the string</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. such a function does not exist</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. none of the mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. matches a pattern at the start of the string</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>re.match()</code> function attempts to match a pattern **only at the beginning** of the string.</p>
+      <p>If the pattern is found at the start, it returns a match object; otherwise, it returns <code>None</code>.</p>
+      <p>To match a pattern anywhere in the string, <code>re.search()</code> should be used instead.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>What does the function <code>re.search</code> do?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. matches a pattern at the start of the string</li>
+      <li onclick="checkAnswer(this, 'correct')">B. matches a pattern at any position in the string</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. such a function does not exist</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. none of the mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. matches a pattern at any position in the string</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>re.search()</code> function scans through the entire string looking for a match to the pattern.</p>
+      <p>It returns the first match found **anywhere** in the string (not just at the beginning).</p>
+      <p>Use <code>re.match()</code> if you want to restrict the search to the start of the string.</p>
+    </div>
+  </div>                
+  <br>
+  <br> 
+  <h1>Chapter 7: Other Regression Related Topics</h1>    
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>What is exploratory data analysis (EDA)?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. An initial way by which we can get a feel for data</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. A rigid framework by which we analyze data</li>
+      <li onclick="checkAnswer(this, 'correct')">C. A type of purely quantitative method of data analysis</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. A set of scientific principles for analyzing data in a categorical manner</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. An initial way by which we can get a feel for data</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>Exploratory Data Analysis (EDA) is the **first step** in data analysis where we visually and statistically explore data to understand its structure, patterns, anomalies, or relationships.</p>
+      <p>It is <strong>not rigid</strong> or purely quantitative—it includes both visual tools (like plots) and summary statistics to get an initial "feel" of the dataset.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following groups find the correlation matrix?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. factor.model</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. col.max(x)</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. stem</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. which.max(x)</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D. which.max(x)</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><code>which.max(x)</code> is an R function that returns the index of the maximum value in a vector. While it doesn't directly compute the correlation matrix, it is more aligned with data analysis operations than the other distractors here. However, the **function used to find the correlation matrix in R is actually <code>cor()</code>**.</p>
+      <p>So technically, none of the options are perfect. But if you're selecting from these, <code>which.max(x)</code> is the most reasonable data analysis tool listed, and is often involved in interpreting matrix results.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Andrews Curves allow one to plot multivariate data.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. True</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. False</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. True</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Andrews Curves</strong> are a visualization tool used in Exploratory Data Analysis (EDA) for plotting multivariate data.</p>
+      <p>They transform each data point into a curve using a Fourier series, making it easier to detect patterns, clusters, and outliers in high-dimensional datasets.</p>
+      <p>This method is particularly useful when you want to analyze multiple features at once.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following plots are often used for checking randomness in time series?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Autocausation</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Autorank</li>
+      <li onclick="checkAnswer(this, 'correct')">C. Autocorrelation</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. None of the mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C. Autocorrelation</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Autocorrelation plots</strong> (also called correlograms) are commonly used in time series analysis to determine whether the observations in the series are correlated with past values.</p>
+      <p>If the values are highly autocorrelated, it suggests a pattern or trend, meaning the data is not completely random. If not, the series may be considered random (or stationary).</p>
+      <p>This is a critical step in model selection for time series forecasting (e.g., ARIMA models).</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>The <code>plot()</code> method on Series and DataFrame is just a simple wrapper around ____________.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Gplt.Plot()</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Plt.Plot()</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Plt.Plotgraph()</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. None Of The Mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Plt.Plot()</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>Pandas' <code>plot()</code> method is a simple wrapper around <code>matplotlib.pyplot.plot()</code>, typically imported as <code>plt</code>.</p>
+      <p>It allows quick and easy plotting of Series and DataFrame data using the powerful <code>matplotlib</code> library under the hood.</p>
+      <p>Example:</p>
+      <pre><code>
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  
+  s = pd.Series([1, 3, 2, 4])
+  s.plot()
+  plt.show()
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Point out the correct combination with regards to <code>kind</code> keyword for graph plotting in Pandas:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. ‘Hist’ For Histogram</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. ‘Box’ For Boxplot</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. ‘Area’ For Area Plots</li>
+      <li onclick="checkAnswer(this, 'correct')">D. All Of The Mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D. All Of The Mentioned</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>In Pandas, the <code>plot()</code> function has a <code>kind</code> parameter that determines the type of plot. Valid values include:</p>
+      <ul>
+        <li><code>'hist'</code> → Histogram</li>
+        <li><code>'box'</code> → Boxplot</li>
+        <li><code>'area'</code> → Area plot</li>
+        <li>Other types include: <code>'line'</code>, <code>'bar'</code>, <code>'barh'</code>, <code>'pie'</code>, etc.</li>
+      </ul>
+      <p>So all the options listed are valid and correct combinations.</p>
+  
+      <p><strong>Example:</strong></p>
+      <pre><code>
+  import pandas as pd
+  
+  df = pd.DataFrame({
+      'A': [1, 2, 3, 4],
+      'B': [3, 4, 2, 1]
+  })
+  
+  df.plot(kind='hist')  # Histogram
+  df.plot(kind='box')   # Boxplot
+  df.plot(kind='area')  # Area plot
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following value is provided by the <code>kind</code> keyword for a bar plot in Pandas?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. Bar</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Kde</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Hexbin</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. None Of The Mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. Bar</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>kind</code> keyword in the Pandas <code>plot()</code> method specifies the type of plot to generate.</p>
+      <ul>
+        <li><code>'bar'</code> – Bar plot (used for categorical data or comparisons).</li>
+        <li><code>'kde'</code> – Kernel Density Estimate plot (used for distributions).</li>
+        <li><code>'hexbin'</code> – Hexagonal bin plot (for 2D histogram-type visualization).</li>
+      </ul>
+      <p>Therefore, to generate a bar plot, you should use <code>kind='bar'</code>.</p>
+  
+      <p><strong>Example:</strong></p>
+      <pre><code>
+  import pandas as pd
+  df = pd.DataFrame({'Category': ['A', 'B', 'C'], 'Values': [4, 7, 2]})
+  df.plot(kind='bar', x='Category', y='Values')
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>You can create a Scatter Plot Matrix using the __________ method in <code>pandas.tools.plotting</code>.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Sca_Matrix</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Scatter_Matrix</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Dataframe.Plot</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. All Of The Mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Scatter_Matrix</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>scatter_matrix</code> function in <code>pandas.plotting</code> (formerly <code>pandas.tools.plotting</code>) is used to generate a matrix of scatter plots for each pair of numerical columns in a DataFrame.</p>
+  
+      <p><strong>Correct Syntax Example:</strong></p>
+      <pre><code>
+  from pandas.plotting import scatter_matrix
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  
+  df = pd.DataFrame({
+      'A': [1, 2, 3],
+      'B': [4, 5, 6],
+      'C': [7, 8, 9]
+  })
+  
+  scatter_matrix(df, alpha=0.8, figsize=(6, 6), diagonal='hist')
+  plt.show()
+      </code></pre>
+  
+      <p>This helps visualize relationships and distributions across multiple variables.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Point out the <strong>wrong combination</strong> with regards to <code>kind</code> keyword for graph plotting.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. ‘Scatter’ For Scatter Plots</li>
+      <li onclick="checkAnswer(this, 'correct')">B. ‘Kde’ For Hexagonal Bin Plots</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. ‘Pie’ For Pie Plots</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. None Of The Mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. ‘Kde’ For Hexagonal Bin Plots</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>kind</code> keyword in Pandas specifies the type of plot to create. Here are the valid uses:</p>
+      <ul>
+        <li><code>'scatter'</code> → Used for scatter plots</li>
+        <li><code>'kde'</code> → Used for Kernel Density Estimation plots (not hexbin)</li>
+        <li><code>'pie'</code> → Used for pie charts</li>
+        <li><code>'hexbin'</code> → Used for hexagonal bin plots</li>
+      </ul>
+      <p>Therefore, saying <strong>'kde'</strong> is for hexagonal bin plots is incorrect.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following plots are used to check if a data set or time series is random?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. Lag</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Random</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Lead</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. None Of The Mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. Lag</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Lag plots</strong> are commonly used in time series analysis to check for randomness. If the points in the lag plot form a structure (e.g., a line or curve), the data may not be random. If they appear scattered randomly, the data likely is.</p>
+      <p>This helps determine whether values are correlated with past values — a key assumption in many time series models.</p>
+    </div>
+  </div>
+<br>
+<br>
+<h1>Chapter 8: Advance</h1>        
+<div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following is a widely used and effective machine learning algorithm based on the idea of bagging?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">Decision Tree</li>
+      <li onclick="checkAnswer(this, 'wrong')">Regression</li>
+      <li onclick="checkAnswer(this, 'wrong')">Classification</li>
+      <li onclick="checkAnswer(this, 'correct')">Random Forest</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: Random Forest</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Random Forest</strong> is an ensemble learning algorithm that builds multiple decision trees during training and merges their results to improve accuracy and control overfitting. It is based on the concept of <strong>bagging (Bootstrap Aggregating)</strong>, where multiple models (decision trees) are trained on random subsets of the data and then aggregated.</p>
+      <p>This method improves performance and robustness compared to a single decision tree.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>What is Machine learning?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">The autonomous acquisition of knowledge through the use of computer programs</li>
+      <li onclick="checkAnswer(this, 'wrong')">The autonomous acquisition of knowledge through the use of manual programs</li>
+      <li onclick="checkAnswer(this, 'wrong')">The selective acquisition of knowledge through the use of computer programs</li>
+      <li onclick="checkAnswer(this, 'wrong')">The selective acquisition of knowledge through the use of manual programs</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: The autonomous acquisition of knowledge through the use of computer programs</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Machine Learning</strong> is a subfield of Artificial Intelligence (AI) that enables systems to learn and improve from experience without being explicitly programmed. It involves the <strong>autonomous acquisition</strong> of patterns or knowledge from data using algorithms and statistical models.</p>
+      <p>The goal is for computers to automatically improve their performance on tasks through exposure to data.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following is correct with respect to random forest?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">Random forest are difficult to interpret but often very accurate</li>
+      <li onclick="checkAnswer(this, 'wrong')">Random forest are easy to interpret but often very accurate</li>
+      <li onclick="checkAnswer(this, 'wrong')">Random forest are difficult to interpret but very less accurate</li>
+      <li onclick="checkAnswer(this, 'wrong')">None of the mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: Random forest are difficult to interpret but often very accurate</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p><strong>Random Forest</strong> is an ensemble learning method that builds multiple decision trees and merges their results to improve accuracy and reduce overfitting.</p>
+      <p>While it is <strong>highly accurate</strong> due to averaging results over many trees, it is also considered a "black box" model because it is <strong>difficult to interpret</strong> how the individual decisions contribute to the final output.</p>
+      <p>This trade-off between accuracy and interpretability is common in ensemble models like Random Forest.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Which of the following is a disadvantage of decision trees?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">Factor analysis</li>
+      <li onclick="checkAnswer(this, 'wrong')">Decision trees are robust to outliers</li>
+      <li onclick="checkAnswer(this, 'correct')">Decision trees are prone to be overfit</li>
+      <li onclick="checkAnswer(this, 'wrong')">None of the above</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: Decision trees are prone to be overfit</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>One of the key disadvantages of decision trees is that they are <strong>prone to overfitting</strong>, especially when the tree is very deep and complex. This means they may perform well on training data but poorly on unseen data.</p>
+      <p>While they are <strong>robust to outliers</strong> and do not require feature scaling, the model's flexibility can lead it to learn noise in the data unless pruning or ensemble methods like Random Forest are used.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Different learning methods does not include:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Memorization</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Analogy</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Deduction</li>
+      <li onclick="checkAnswer(this, 'correct')">D. Introduction</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D. Introduction</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>In the context of artificial intelligence and machine learning, common learning methods include:</p>
+      <ul>
+        <li><strong>Memorization</strong>: Learning by storing previously encountered examples.</li>
+        <li><strong>Analogy</strong>: Learning by comparing new situations to known ones.</li>
+        <li><strong>Deduction</strong>: Learning by logical reasoning from general rules to specific instances.</li>
+      </ul>
+      <p><strong>Introduction</strong> is not considered a formal method of learning in AI/ML frameworks. Therefore, it's not part of the recognized learning methods.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>A _________ is a decision support tool that uses a tree-like graph or model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. Decision tree</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Graphs</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Trees</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Neural Networks</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. Decision tree</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        A <strong>decision tree</strong> is a widely used decision support tool that presents decisions and their possible consequences, outcomes, costs, and benefits in a tree-like structure. 
+        It is particularly helpful in classification and regression problems in machine learning and is also useful in operational and strategic decision-making processes.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Decision Tree is a display of an algorithm.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. True</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. False</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. True</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        A <strong>decision tree</strong> visually represents the flow of an algorithm that makes decisions based on conditions at each node, leading to different outcomes or classifications.
+        Thus, it is a graphical display of the decision-making process and underlying algorithm.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Decision Nodes are represented by ____________</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Disks</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Squares</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Circles</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Triangles</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Squares</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In decision trees, <strong>decision nodes</strong> are typically represented by <strong>squares</strong>, indicating points where a decision or test is made.
+        Other nodes like chance nodes may be shown as circles.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Automated vehicle is an example of ______</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. Supervised learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. Unsupervised learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Active learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Reinforcement learning</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. Supervised learning</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        Automated vehicles often rely on <strong>Supervised Learning</strong>, where models are trained on labeled data
+        to recognize patterns and make decisions based on prior examples. This allows the vehicle to predict and react to various driving scenarios.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>In which of the following learning the teacher returns reward and punishment to learner?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Active learning</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Reinforcement learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Supervised learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Unsupervised learning</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Reinforcement learning</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In <strong>Reinforcement Learning</strong>, the learner (agent) learns by interacting with the environment and receives rewards or punishments as feedback from the teacher (environment). This feedback guides the agent to improve its actions over time.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>In which of the following learning the teacher returns reward and punishment to learner?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. Active learning</li>
+      <li onclick="checkAnswer(this, 'correct')">B. Reinforcement learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. Supervised learning</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. Unsupervised learning</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. Reinforcement learning</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In <strong>Reinforcement Learning</strong>, the learner (agent) learns by interacting with the environment and receives rewards or punishments as feedback from the teacher (environment). This feedback guides the agent to improve its actions over time.
+      </p>
+    </div>
+  </div>
+      
+                  
 <br>
 <br>
 <h1>Final Question</h1>
