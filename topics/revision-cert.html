@@ -2309,3 +2309,780 @@ ValueError: could not convert string to float: '12+34'
         </code></pre>
     </div>
 </div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code snippet?</p>
+
+    <pre><code>
+['hello', 'morning'][bool('')]
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) error</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) no output</li>
+        <li onclick="checkAnswer(this, 'correct')">C) hello</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) morning</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) hello</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>Let's break it down:</p>
+
+        <ol>
+            <li><code>bool('')</code> → This is <code>False</code> because an empty string is considered <strong>falsey</strong> in Python.</li>
+            <li>So the expression becomes <code>['hello', 'morning'][False]</code></li>
+            <li>In Python, <code>False</code> is equivalent to integer <code>0</code>, and <code>True</code> is <code>1</code></li>
+            <li>Therefore, <code>['hello', 'morning'][0]</code> returns <strong>'hello'</strong></li>
+        </ol>
+
+        <h4>✅ Output:</h4>
+        <pre><code>'hello'</code></pre>
+
+        <h4>💡 Quick Tip:</h4>
+        <p>This is a common Pythonic trick used for conditional selection inside lists.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Suppose <code>t = (1, 2, 4, 3)</code>, which of the following is <strong>incorrect</strong>?</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) print(t[3])</li>
+        <li onclick="checkAnswer(this, 'correct')">B) t[3] = 45</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) print(max(t))</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) print(len(t))</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) t[3] = 45</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The variable <code>t</code> is a tuple, and tuples in Python are <strong>immutable</strong>. That means once defined, you cannot change their elements.</p>
+
+        <h4>Let’s evaluate each option:</h4>
+        <ul>
+            <li><code>print(t[3])</code> → Valid, outputs <code>3</code></li>
+            <li><code>t[3] = 45</code> → ❌ Invalid. Trying to assign a value in a tuple raises a <code>TypeError</code></li>
+            <li><code>print(max(t))</code> → Valid, prints the maximum value in the tuple: <code>4</code></li>
+            <li><code>print(len(t))</code> → Valid, prints the length of the tuple: <code>4</code></li>
+        </ul>
+
+        <h4>🚫 Error Output:</h4>
+        <pre><code>
+TypeError: 'tuple' object does not support item assignment
+        </code></pre>
+
+        <h4>📌 Tuple Facts:</h4>
+        <ul>
+            <li>Tuples are ordered and immutable</li>
+            <li>They can contain heterogeneous data</li>
+            <li>They support indexing, slicing, and built-in functions like <code>max()</code> and <code>len()</code></li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following Python code?</p>
+
+    <pre><code>
+d = {0: 'a', 1: 'b', 2: 'c'}
+for x in d.keys():
+    print(d[x])
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 0 1 2</li>
+        <li onclick="checkAnswer(this, 'correct')">B) a b c</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 0 a 1 b 2 c</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) none of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) a b c</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The dictionary <code>d</code> is defined as:</p>
+        <pre><code>{0: 'a', 1: 'b', 2: 'c'}</code></pre>
+
+        <p>The loop <code>for x in d.keys()</code> iterates over the keys: <code>0, 1, 2</code></p>
+        <p>Each key is used to access and print its corresponding value from the dictionary:</p>
+
+        <pre><code>
+d[0] → 'a'
+d[1] → 'b'
+d[2] → 'c'
+        </code></pre>
+
+        <p>So, the output printed is:</p>
+        <pre><code>a
+b
+c
+        </code></pre>
+
+        <h4>📌 Important Concepts:</h4>
+        <ul>
+            <li><code>d.keys()</code> returns all the dictionary keys</li>
+            <li><code>d[x]</code> accesses the value associated with key <code>x</code></li>
+        </ul>
+
+        <h4>👀 Note:</h4>
+        <p>If this were printed on the same line (e.g., using <code>end=" "</code>), the output would be <code>a b c</code>.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following Python code?</p>
+
+    <pre><code>
+x = 'abcd'
+for i in x:
+    print(i.upper())
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) a b c d</li>
+        <li onclick="checkAnswer(this, 'correct')">B) A B C D</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) a B C D</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) error</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) A B C D</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The code iterates through the string <code>'abcd'</code>, converting each character to uppercase using <code>i.upper()</code>:</p>
+
+        <ul>
+            <li>'a'.upper() → 'A'</li>
+            <li>'b'.upper() → 'B'</li>
+            <li>'c'.upper() → 'C'</li>
+            <li>'d'.upper() → 'D'</li>
+        </ul>
+
+        <p>The loop prints each uppercase letter on a separate line:</p>
+        <pre><code>
+A
+B
+C
+D
+        </code></pre>
+
+        <h4>✅ Therefore, the output is: A B C D</h4>
+        <p>(if shown side by side — otherwise, each letter appears on a new line)</p>
+
+        <h4>📌 Key Concept:</h4>
+        <p><code>str.upper()</code> is a built-in method that converts any lowercase character to uppercase.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+    <pre><code>
+for i in range(int(2.0)):
+    print(i)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 0.0 1.0</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 0 1</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) error</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) none of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) 0 1</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <ul>
+            <li><code>int(2.0)</code> converts the float <code>2.0</code> to the integer <code>2</code></li>
+            <li><code>range(2)</code> generates numbers starting from <code>0</code> up to <code>1</code> (not including 2)</li>
+            <li>The loop prints each number in that range:</li>
+        </ul>
+
+        <pre><code>
+0
+1
+        </code></pre>
+
+        <h4>📌 Reminder:</h4>
+        <ul>
+            <li><code>int()</code> can safely convert float values to integers (if they’re whole numbers)</li>
+            <li><code>range()</code> must always receive integer arguments</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the use of the <code>seek()</code> method in files?</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) sets the file’s current position at the offset</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) sets the file’s previous position at the offset</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) sets the file’s current position within the file</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) none of the mentioned</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) sets the file’s current position at the offset</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>The <code>seek()</code> method is used to move the file pointer to a specific location in the file. This allows you to re-read or overwrite parts of the file from that position.</p>
+
+        <pre><code>
+f = open("example.txt", "r")
+f.seek(5)  # Moves the file pointer to byte 5
+data = f.read()  # Starts reading from byte 5
+        </code></pre>
+
+        <h4>🔁 Common Use Cases:</h4>
+        <ul>
+            <li>Rewinding a file (e.g., <code>seek(0)</code> to go to the beginning)</li>
+            <li>Jumping to specific byte positions for reading/writing</li>
+        </ul>
+
+        <h4>📌 Note:</h4>
+        <p><code>seek()</code> is especially useful when working with binary files or resetting the file pointer.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the <strong>best way</strong> to import the pandas module in your program?</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) import pandas</li>
+        <li onclick="checkAnswer(this, 'correct')">B) import pandas as p</li>
+        <li onclick="checkAnswer(this, 'correct')">C) from pandas import *</li>
+        <li onclick="checkAnswer(this, 'correct')">D) All of the above</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D) All of the above</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <table>
+            <tr>
+                <th>Import Style</th>
+                <th>Valid?</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td><code>import pandas</code></td>
+                <td>✅</td>
+                <td>Standard import. Use full name like <code>pandas.DataFrame()</code></td>
+            </tr>
+            <tr>
+                <td><code>import pandas as p</code></td>
+                <td>✅</td>
+                <td>Valid alias. Conventionally, <code>pd</code> is used instead of <code>p</code></td>
+            </tr>
+            <tr>
+                <td><code>from pandas import *</code></td>
+                <td>✅</td>
+                <td>Valid, but not recommended — pollutes global namespace</td>
+            </tr>
+        </table>
+
+        <h4>🔍 Recommendation:</h4>
+        <p>The most recommended and widely used approach is:</p>
+        <pre><code>import pandas as pd</code></pre>
+
+        <p>This makes your code concise and conventional for readability.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>We can analyze the data in pandas with:</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Series</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) DataFrame</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Both of the above</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) None of the above</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) Both of the above</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>Pandas provides two primary data structures for data manipulation and analysis:</p>
+
+        <ul>
+            <li><strong>Series</strong>: A one-dimensional labeled array capable of holding any data type (integers, strings, floats, etc.).</li>
+            <li><strong>DataFrame</strong>: A two-dimensional labeled data structure with columns that can hold different data types (like a spreadsheet or SQL table).</li>
+        </ul>
+
+        <h4>✅ Therefore:</h4>
+        <p>You can analyze data using both <code>Series</code> and <code>DataFrame</code>, depending on your use case.</p>
+
+        <h4>💡 Example:</h4>
+        <pre><code>
+import pandas as pd
+
+# Series
+s = pd.Series([10, 20, 30])
+
+# DataFrame
+df = pd.DataFrame({
+    'Name': ['Alice', 'Bob'],
+    'Age': [25, 30]
+})
+        </code></pre>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Most often, EDA relies on _____.</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) visual techniques</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) assumptions</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) fixed models</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) testing for statistical significance</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) visual techniques</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p><strong>Exploratory Data Analysis (EDA)</strong> is the initial step in data analysis that uses visual methods to:</p>
+        <ul>
+            <li>Understand the distribution of data</li>
+            <li>Identify patterns, trends, and outliers</li>
+            <li>Check assumptions and relationships between variables</li>
+        </ul>
+
+        <h4>📊 Common Visualization Tools in EDA:</h4>
+        <ul>
+            <li>Histograms</li>
+            <li>Box plots</li>
+            <li>Scatter plots</li>
+            <li>Correlation heatmaps</li>
+        </ul>
+
+        <h4>🚫 Why Not Others?</h4>
+        <ul>
+            <li><strong>Assumptions</strong> are validated after EDA, not relied upon initially</li>
+            <li><strong>Fixed models</strong> are applied after exploring the data</li>
+            <li><strong>Statistical significance</strong> testing is part of inferential statistics, not EDA</li>
+        </ul>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following Python code?</p>
+
+    <pre><code>
+a, b = 1, 0
+a = a ^ b
+b = a ^ b
+a = a ^ b
+print(a)
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) 0</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 1</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 2</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) This code will raise a runtime error</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) 0</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>This code performs a variable swap using the XOR bitwise operator <code>^</code>. Here's what happens step-by-step:</p>
+
+        <ul>
+            <li><code>a = 1, b = 0</code></li>
+            <li><code>a = a ^ b → 1 ^ 0 = 1</code></li>
+            <li><code>b = a ^ b → 1 ^ 0 = 1</code></li>
+            <li><code>a = a ^ b → 1 ^ 1 = 0</code></li>
+        </ul>
+
+        <p>So after the swap, the values are:</p>
+        <ul>
+            <li><code>a = 0</code></li>
+            <li><code>b = 1</code></li>
+        </ul>
+
+        <p>Finally, <code>print(a)</code> outputs <strong>0</strong>.</p>
+
+        <h4>📌 Note:</h4>
+        <p>This is a common technique used in low-level programming to swap variables without a temporary variable.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the value of the following expression?</p>
+
+    <pre><code>
+2 ** 2 ** 3 ** 1
+    </code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 12</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 64</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 128</li>
+        <li onclick="checkAnswer(this, 'correct')">D) 256</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: D) 256</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>In Python, the exponentiation operator <code>**</code> is <strong>right-associative</strong>, which means it evaluates from right to left.</p>
+
+        <p>So the expression:</p>
+        <pre><code>2 ** 2 ** 3 ** 1</code></pre>
+        <p>Evaluates as:</p>
+        <pre><code>2 ** (2 ** (3 ** 1))</code></pre>
+
+        <ul>
+            <li><code>3 ** 1</code> = 3</li>
+            <li><code>2 ** 3</code> = 8</li>
+            <li><code>2 ** 8</code> = 256</li>
+        </ul>
+
+        <h4>📌 Key Concept:</h4>
+        <p><code>**</code> chains from the right, unlike many other binary operators in Python.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Select the <strong>incorrect</strong> statement:</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) You can pass positional arguments in any order.</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) You can pass keyword arguments in any order.</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) You can call a function with positional and keyword arguments.</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Positional arguments must be before keyword arguments in a function call.</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) You can pass positional arguments in any order.</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <ul>
+            <li><strong>A) ❌ Incorrect:</strong> Positional arguments must be passed in the order defined in the function. You cannot change their order.</li>
+            <li><strong>B) ✅ Correct:</strong> Keyword arguments can be passed in any order, as long as the correct parameter names are used.</li>
+            <li><strong>C) ✅ Correct:</strong> You can use a combination of positional and keyword arguments when calling a function.</li>
+            <li><strong>D) ✅ Correct:</strong> Positional arguments must come before any keyword arguments in a function call.</li>
+        </ul>
+
+        <h4>📌 Summary:</h4>
+        <p>Python enforces order for <strong>positional</strong> arguments, but allows flexibility with <strong>keyword</strong> arguments.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Suppose you have two sets <code>s1 = {1, 2, 3}</code> and <code>s2 = {3, 4, 5}</code>. Which of the following statements <strong>does NOT</strong> give us their union?</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) s1.union({3, 4, 5})</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) s1 | {3, 4, 5}</li>
+        <li onclick="checkAnswer(this, 'correct')">C) s1 | [3, 4, 5]</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) s1.union(set([3, 4, 5]))</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: C) s1 | [3, 4, 5]</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p>We are finding the union of sets <code>s1 = {1, 2, 3}</code> and <code>{3, 4, 5}</code>. The correct union is <code>{1, 2, 3, 4, 5}</code>.</p>
+
+        <ul>
+            <li><strong>A) ✅ Valid:</strong> <code>s1.union({3, 4, 5})</code> is correct and returns the union.</li>
+            <li><strong>B) ✅ Valid:</strong> <code>s1 | {3, 4, 5}</code> uses the union operator for sets and works properly.</li>
+            <li><strong>C) ❌ Invalid:</strong> <code>s1 | [3, 4, 5]</code> raises a <code>TypeError</code> because <code>|</code> only works with set operands — not with lists.</li>
+            <li><strong>D) ✅ Valid:</strong> <code>s1.union(set([3, 4, 5]))</code> first converts the list to a set and performs a valid union.</li>
+        </ul>
+
+        <h4>📌 Note:</h4>
+        <p>The <code>|</code> operator is only valid between set types. Mixing it with a list causes an error.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Polymorphism is when a subclass can modify the behavior of its superclass.</p>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) False</li>
+        <li onclick="checkAnswer(this, 'correct')">B) True</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Depends on the contents of the class</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) This is an invalid question</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) True</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <p><strong>Polymorphism</strong> is a core concept of Object-Oriented Programming (OOP) which means “many forms.” It allows objects of different classes to respond to the same method call in a way specific to their class.</p>
+
+        <p>When a subclass modifies (or overrides) the behavior of its superclass by redefining a method, it's called <strong>method overriding</strong>, which is a type of polymorphism.</p>
+
+        <h4>📌 Example:</h4>
+        <pre><code>class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+a = Animal()
+d = Dog()
+a.speak()  # Output: Animal speaks
+d.speak()  # Output: Dog barks</code></pre>
+
+        <p>This is an example of polymorphism — different behaviors for the same method <code>speak()</code>.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will be the output of the following Python code?</p>
+
+<pre><code>
+scores = {'Ayushi': 97, 'Megha': 98}
+if scores['Ayushi'] > 97:
+    print("Scholar")
+elif scores['Megha'] > 97:
+    print("Topper")
+elif scores['Melanie'] > 97:
+    print("Teacher")
+else:
+    print("Nobody topped")
+</code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Scholar</li>
+        <li onclick="checkAnswer(this, 'correct')">B) Topper</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Teacher</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) This code raises a KeyError</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: B) Topper</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <ul>
+            <li><strong>scores['Ayushi']</strong> = 97 → not greater than 97 → ❌</li>
+            <li><strong>scores['Megha']</strong> = 98 → greater than 97 → ✅ <code>print("Topper")</code></li>
+        </ul>
+
+        <p>The <code>elif scores['Melanie']</code> line is never reached, so no KeyError occurs, even though 'Melanie' isn't in the dictionary.</p>
+
+        <p>If we had reached <code>scores['Melanie']</code>, it would raise a <code>KeyError</code>, but here it’s bypassed due to the earlier true condition.</p>
+
+        <h4>🛠 Correction Note:</h4>
+        <p>The original code had a small syntax issue with <code>)</code> instead of <code>}</code> when defining the dictionary. Assuming it’s fixed, the logic runs fine.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output of the following Python code?</p>
+
+<pre><code>
+val = 154
+while(not(val)):
+    val **= 2
+else:
+    val //= 2
+
+print(val)
+</code></pre>
+
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) 77</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 154</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 11858</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 23716</li>
+    </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <h4>✅ Correct Answer: A) 77</h4>
+
+        <h4>🧠 Explanation:</h4>
+        <ul>
+            <li><code>val = 154</code></li>
+            <li><code>not(val)</code> → <code>not(154)</code> → <code>False</code></li>
+            <li>Since the condition is False, the <code>while</code> block is skipped</li>
+            <li>The <code>else</code> block runs: <code>val //= 2</code> → <code>154 // 2 = 77</code></li>
+            <li><code>print(val)</code> → <code>77</code></li>
+        </ul>
+
+        <p><strong>Note:</strong> In Python, <code>while-else</code> means the <code>else</code> runs only when the loop isn't broken by <code>break</code> — or is skipped entirely.</p>
+    </div>
+</div>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What will the following Python code print?</p>
+  
+  <pre><code>
+  from random import randint
+  for i in range(5):
+      print(random(1, 5))
+  </code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) Five random numbers in the range 1 to 5</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) Five random integers in the range 1 to 4</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) Five random integers in the range 1 to 5</li>
+      <li onclick="checkAnswer(this, 'correct')">D) This code raises an exception</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D) This code raises an exception</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The code imports only <code>randint</code> from the <code>random</code> module:</p>
+      <pre><code>from random import randint</code></pre>
+  
+      <p>But the function <code>random(1, 5)</code> is called inside the loop — which doesn't exist unless <code>random</code> itself was imported.</p>
+  
+      <p><strong>Error:</strong> <code>NameError: name 'random' is not defined</code></p>
+  
+      <h4>✅ Correct version of the code:</h4>
+      <pre><code>from random import randint
+  for i in range(5):
+      print(randint(1, 5))</code></pre>
+  
+      <p>This would print five random integers between 1 and 5, inclusive.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>How many levels deep are sublists in the following Python list?</p>
+  
+  <pre><code>
+  l = list()
+  l.append([1, 2, [3, 4]])
+  l.extend([5, 6, 7])
+  print(1)
+  </code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) 1</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) 2</li>
+      <li onclick="checkAnswer(this, 'correct')">C) 3</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) 4</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C) 3</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <ul>
+        <li><code>l.append([1, 2, [3, 4]])</code> adds a single element: a list → <code>[[1, 2, [3, 4]]]</code></li>
+        <li><code>l.extend([5, 6, 7])</code> adds elements 5, 6, 7 to the outer list</li>
+        <li>Final structure:
+          <pre><code>[
+    [1, 2, [3, 4]],  # Level 2
+    5,
+    6,
+    7
+  ]</code></pre></li>
+      </ul>
+  
+      <p><strong>Nested levels:</strong></p>
+      <ul>
+        <li>Level 1: Outer list <code>l</code></li>
+        <li>Level 2: First element is a list → <code>[1, 2, [3, 4]]</code></li>
+        <li>Level 3: Inside it → <code>[3, 4]</code> is another list</li>
+      </ul>
+  
+      <p>✅ Maximum depth = <strong>3</strong></p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Select the <strong>incorrect statements</strong> from the following:</p>
+  
+    <ol type="I">
+      <li>Constructors cannot return values</li>
+      <li>The <code>__bases__</code> attribute will give you the names of the direct parent classes</li>
+      <li><code>issubclass(A, B)</code> returns True if A is an object derived from class B</li>
+      <li>Function overloading is an effective way to implement polymorphism in Python</li>
+    </ol>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) I and III</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) II and III</li>
+      <li onclick="checkAnswer(this, 'correct')">C) III and IV</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) I, II and IV</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B) II and III</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <ul>
+        <li><strong>I. Constructors cannot return values</strong> ✅ Correct statement.<br>
+          Python constructors (i.e., <code>__init__</code>) must not return values except <code>None</code>.
+        </li>
+        <li><strong>II. The <code>__bases__</code> attribute will give you the names of the direct parent classes</strong> ❌ Incorrect.<br>
+          <code>__bases__</code> gives **classes**, not their names.
+        </li>
+        <li><strong>III. <code>issubclass(A, B)</code> returns True if A is an object derived from class B</strong> ❌ Incorrect.<br>
+          <code>issubclass()</code> works with **classes**, not objects.
+        </li>
+        <li><strong>IV. Function overloading is an effective way to implement polymorphism in Python</strong> ✅ Mostly acceptable.<br>
+          Python doesn’t support traditional function overloading but polymorphism is supported via method overriding or *args/**kwargs.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What can be passed as data while creating a <code>DataFrame</code> in Pandas?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) Integer</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) String</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) Pandas Series</li>
+      <li onclick="checkAnswer(this, 'correct')">D) All of the above</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D) All of the above</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>You can pass different types of data structures to <code>pandas.DataFrame()</code>, such as:</p>
+      <ul>
+        <li><strong>Integer</strong> → as part of a list or array</li>
+        <li><strong>String</strong> → as part of a column, list, or dictionary</li>
+        <li><strong>Pandas Series</strong> → as individual columns</li>
+      </ul>
+      <p>You can also use:</p>
+      <ul>
+        <li>Dictionaries</li>
+        <li>Lists of lists</li>
+        <li>NumPy arrays</li>
+      </ul>
+      <p>This flexibility makes DataFrame a powerful structure for data analysis in Pandas.</p>
+    </div>
+  </div>
+  
+      
