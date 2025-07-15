@@ -2252,6 +2252,85 @@ print(max_val)  # Output: 10
         </code></pre>
     </div>
 </div>
+<div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>What will be the output of the following Python code snippet?</p>
+    <pre>print('+99'.zfill(5))</pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. 00+99</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. 00099</li>
+      <li onclick="checkAnswer(this, 'correct')">C. +0099</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. +++99</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C. +0099</h4>
+      <h4>🧠 Explanation:</h4>
+      <p>
+        The <code>zfill(width)</code> method pads the string on the left with zeros until it reaches the specified width.
+        If the string starts with a '+' or '-', the zeros are inserted after the sign.
+        Here, '+99' is of length 3, so two zeros are added after the '+' to make the length 5 → <code>+0099</code>.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <pre>
+  a = {'B': 5, 'A': 9, 'C': 7}
+  sorted(a)
+    </pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. ['A', 'B', 'C']</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. ['B', 'C', 'A']</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. [5, 7, 9]</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. [9, 5, 7]</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. ['A', 'B', 'C']</h4>
+      <h4>🧠 Explanation:</h4>
+      <p>
+        The <code>sorted()</code> function, when applied to a dictionary, sorts its keys by default.
+        So, <code>sorted(a)</code> returns the sorted list of keys: <code>['A', 'B', 'C']</code>.
+        The values are not considered unless explicitly accessed.
+      </p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <pre>
+  a = {}
+  a[2] = 1
+  a[1] = [2, 3, 4]
+  print(a[1][1])
+    </pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. [2, 3, 4]</li>
+      <li onclick="checkAnswer(this, 'correct')">B. 3</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. 2</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. An exception is thrown</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. 3</h4>
+      <h4>🧠 Explanation:</h4>
+      <p>
+        The dictionary <code>a</code> has two keys: <code>2</code> mapped to <code>1</code>, and
+        <code>1</code> mapped to the list <code>[2, 3, 4]</code>.
+        Accessing <code>a[1]</code> returns the list <code>[2, 3, 4]</code>, and
+        <code>a[1][1]</code> accesses the element at index 1 of that list,
+        which is <code>3</code>.
+      </p>
+    </div>
+  </div>
+<br>
+<br>      
 <h1>Chapter 3: Python Libraries</h1>
 <div class="quiz-question">
     <p><strong>Question</strong></p>
