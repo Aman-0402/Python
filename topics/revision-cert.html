@@ -2252,6 +2252,745 @@ print(max_val)  # Output: 10
         </code></pre>
     </div>
 </div>
+<h1>Chapter 3: Python Libraries</h1>
+<div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the correct way to install the <code>pandas</code> library?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) install pandas</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) pandas install python</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) python install pandas</li>
+      <li onclick="checkAnswer(this, 'correct')">D) pip install pandas</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D) pip install pandas</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The correct command to install the <code>pandas</code> library using Python's package manager is:</p>
+      <pre><code>pip install pandas</code></pre>
+      <p>This downloads and installs pandas and its dependencies from the Python Package Index (PyPI).</p>
+  
+      <h4>❌ Incorrect Options:</h4>
+      <ul>
+        <li><code>install pandas</code> – Not a valid command</li>
+        <li><code>pandas install python</code> – Reversed and invalid syntax</li>
+        <li><code>python install pandas</code> – Incorrect use of the <code>python</code> command</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>DataFrame in pandas is ...</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) 1 dimensional array</li>
+      <li onclick="checkAnswer(this, 'correct')">B) 2 dimensional array</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) 3 dimensional array</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) None of the above</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B) 2 dimensional array</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>A <code>DataFrame</code> in pandas is a two-dimensional, size-mutable, and heterogeneous data structure — similar to a table in a database, an Excel spreadsheet, or a SQL table.</p>
+      <ul>
+        <li>Rows and columns are labeled (indexed)</li>
+        <li>Each column can hold data of a different type (int, float, string, etc.)</li>
+      </ul>
+  
+      <h4>Example:</h4>
+      <pre><code>
+  import pandas as pd
+  df = pd.DataFrame({
+      "Name": ["Alice", "Bob"],
+      "Age": [25, 30]
+  })
+  print(df)
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Suppose <code>list1 = [1, 3, 2]</code>. What is <code>list1 * 2</code>?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) [2, 6, 4]</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) [1, 3, 2, 1, 3]</li>
+      <li onclick="checkAnswer(this, 'correct')">C) [1, 3, 2, 1, 3, 2]</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) [1, 3, 2, 3, 2, 1]</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C) [1, 3, 2, 1, 3, 2]</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>In Python, multiplying a list by an integer using <code>*</code> repeats the list that many times.</p>
+      <pre><code>
+  list1 = [1, 3, 2]
+  print(list1 * 2)  # Output: [1, 3, 2, 1, 3, 2]
+      </code></pre>
+      <p>This does <strong>not</strong> multiply individual elements — it duplicates the entire list.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What is the output when the following code is executed?</p>
+    <pre><code>"Welcome to Python".split()</code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A) [“Welcome”, “to”, “Python”]</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) (“Welcome”, “to”, “Python”)</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) {“Welcome”, “to”, “Python”}</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) “Welcome”, “to”, “Python”</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A) [“Welcome”, “to”, “Python”]</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>split()</code> method, when called without any arguments, splits a string at each space and returns a list of words.</p>
+      
+      <pre><code>
+  text = "Welcome to Python"
+  print(text.split())  # Output: ['Welcome', 'to', 'Python']
+      </code></pre>
+  
+      <p>So the output is a <strong>list</strong> containing the words as elements.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which function from the options given below can read the dataset from a large text file?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) read_json</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) read_pickle</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) read_hdf</li>
+      <li onclick="checkAnswer(this, 'correct')">D) read_csv</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D) read_csv</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>read_csv()</code> function in pandas is specifically designed to read data from large text files that are comma-separated (CSV format).</p>
+      
+      <p>Other options:</p>
+      <ul>
+        <li><code>read_json</code>: reads JSON-formatted data</li>
+        <li><code>read_pickle</code>: reads pickled pandas objects</li>
+        <li><code>read_hdf</code>: reads HDF5 files, not plain text</li>
+      </ul>
+  
+      <p><strong>Therefore, for plain text datasets, especially CSV files, <code>read_csv()</code> is the most appropriate.</strong></p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>This function in the library of Pandas allows you to manipulate data and create new variables:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) read_csv function</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) pivot_table function</li>
+      <li onclick="checkAnswer(this, 'correct')">C) apply function</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) merge function</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C) apply function</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>apply()</code> function in pandas is used to apply a function along the axis of a DataFrame or Series. This allows you to perform custom operations, transform data, and create new variables.</p>
+  
+      <h4>Example:</h4>
+      <pre><code>
+  import pandas as pd
+  
+  df = pd.DataFrame({'x': [1, 2, 3]})
+  df['squared'] = df['x'].apply(lambda x: x**2)
+  print(df)
+      </code></pre>
+  
+      <h4>Why not the others?</h4>
+      <ul>
+        <li><code>read_csv()</code>: only reads data from a file</li>
+        <li><code>pivot_table()</code>: used for summarizing data</li>
+        <li><code>merge()</code>: used to combine two datasets</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which of these is an invalid writer function in Pandas?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) to_clipboard</li>
+      <li onclick="checkAnswer(this, 'correct')">B) to_text</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) to_stata</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) to_msgpack</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B) to_text</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>Pandas provides several writer functions to export data to different formats. Here's a breakdown:</p>
+  
+      <ul>
+        <li><code>to_clipboard()</code> — ✅ Valid, writes data to your system clipboard</li>
+        <li><code>to_stata()</code> — ✅ Valid, writes to Stata file format</li>
+        <li><code>to_msgpack()</code> — ✅ (Deprecated) used to write data in MessagePack format</li>
+        <li><code>to_text()</code> — ❌ <strong>Invalid</strong>, there is no such function called <code>to_text</code> in pandas</li>
+      </ul>
+  
+      <p><strong>Note:</strong> While <code>to_msgpack</code> is deprecated in modern versions of pandas, it was once valid — unlike <code>to_text</code>, which never existed.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Which among the following options can be used to create a DataFrame in Pandas?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) A scalar value</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) An ndarray</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) A python dict</li>
+      <li onclick="checkAnswer(this, 'correct')">D) All of the above</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D) All of the above</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>Pandas provides flexibility in creating DataFrames using various input types:</p>
+  
+      <table>
+        <tr>
+          <th>Input Type</th>
+          <th>Valid?</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>scalar</code></td>
+          <td>✅</td>
+          <td>Creates a DataFrame where the scalar is broadcasted across specified index/columns.</td>
+        </tr>
+        <tr>
+          <td><code>ndarray</code></td>
+          <td>✅</td>
+          <td>You can pass a 2D NumPy array as data.</td>
+        </tr>
+        <tr>
+          <td><code>dict</code></td>
+          <td>✅</td>
+          <td>The most common and flexible way; keys become column names.</td>
+        </tr>
+      </table>
+  
+      <h4>✅ Example:</h4>
+      <pre><code>
+  import pandas as pd
+  import numpy as np
+  
+  # From scalar
+  df1 = pd.DataFrame(7, index=[0, 1], columns=['A'])
+  
+  # From ndarray
+  df2 = pd.DataFrame(np.array([[1, 2], [3, 4]]), columns=['X', 'Y'])
+  
+  # From dict
+  df3 = pd.DataFrame({'Name': ['Alice', 'Bob'], 'Age': [25, 30]})
+      </code></pre>
+  
+      <p>So, all of the listed options can be used to create a DataFrame in Pandas.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>Identify the correct statement:</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) The standard marker for missing data in Pandas is NaN</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) Series act in a way similar to that of an array</li>
+      <li onclick="checkAnswer(this, 'correct')">C) Both of the above</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) None of the above</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C) Both of the above</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <ul>
+        <li><strong>NaN (Not a Number)</strong> is indeed the standard placeholder for missing values in Pandas.</li>
+        <li><strong>Series</strong> in Pandas are 1-dimensional labeled arrays and behave very similarly to NumPy arrays, supporting element-wise operations and broadcasting.</li>
+      </ul>
+  
+      <h4>✅ Example:</h4>
+      <pre><code>
+  import pandas as pd
+  import numpy as np
+  
+  # NaN example
+  data = pd.Series([10, np.nan, 30])
+  print(data)
+  
+  # Series like array
+  arr = pd.Series([1, 2, 3])
+  print(arr + 10)  # [11, 12, 13]
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question</strong></p>
+    <p>What happens to the indexes when any operations are done to unaligned series?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) Total</li>
+      <li onclick="checkAnswer(this, 'correct')">B) Union</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) Intersection</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) All of the above</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B) Union</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>When performing operations on two unaligned pandas Series (i.e., Series with different indexes), pandas automatically aligns them by the index and performs the <strong>union</strong> of the two index sets. If an index is missing in either series, the result will have a <code>NaN</code> at that position.</p>
+  
+      <h4>✅ Example:</h4>
+      <pre><code>
+  import pandas as pd
+  
+  s1 = pd.Series([1, 2], index=['a', 'b'])
+  s2 = pd.Series([3, 4], index=['b', 'c'])
+  
+  print(s1 + s2)
+  # Output:
+  # a    NaN
+  # b    5.0
+  # c    NaN
+      </code></pre>
+  
+      <p>As shown, the resulting index is the <strong>union</strong> of s1 and s2's indexes: ['a', 'b', 'c'].</p>
+    </div>
+  </div>
+  <br>
+  <br>
+<h1>Chapter 4: Error Handling</h1>  
+<div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>Is the following Python code valid?</p>
+  
+    <pre><code>try:
+      # Do something
+  except:
+      # Do something
+  finally:
+      # Do something</code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) no, there is no such thing as finally</li>
+      <li onclick="checkAnswer(this, 'correct')">B) no, finally cannot be used with except</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) no, finally must come before except</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) yes</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B) no, finally cannot be used with except</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>try-except-finally</code> structure is completely valid in Python. Here's how it works:</p>
+      <ul>
+        <li><strong>try:</strong> block contains code that might raise an exception.</li>
+        <li><strong>except:</strong> block handles exceptions if they occur.</li>
+        <li><strong>finally:</strong> block contains code that will always run after try and except, regardless of whether an exception occurred.</li>
+      </ul>
+  
+      <h4>✅ Example:</h4>
+      <pre><code>try:
+      print("Trying...")
+      x = 1 / 0  # Raises ZeroDivisionError
+  except:
+      print("Exception caught!")
+  finally:
+      print("This runs no matter what.")</code></pre>
+  
+      <p>Output:</p>
+      <pre><code>Trying...
+  Exception caught!
+  This runs no matter what.</code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>How many <code>except</code> statements can a <code>try-except</code> block have?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) zero</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) one</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) more than one</li>
+      <li onclick="checkAnswer(this, 'correct')">D) more than zero</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C) more than one</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>A <code>try</code> block in Python can be followed by:</p>
+      <ul>
+        <li>Multiple <code>except</code> blocks to handle different types of exceptions</li>
+        <li>Only one block will run — the first matching <code>except</code></li>
+      </ul>
+  
+      <h4>✅ Example:</h4>
+      <pre><code>try:
+      x = int("abc")
+  except ValueError:
+      print("ValueError caught")
+  except TypeError:
+      print("TypeError caught")</code></pre>
+  
+      <p>This handles both <code>ValueError</code> and <code>TypeError</code> appropriately, using multiple <code>except</code> blocks.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>When will the <code>else</code> part of <code>try-except-else</code> be executed?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) always</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) when an exception occurs</li>
+      <li onclick="checkAnswer(this, 'correct')">C) when no exception occurs</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) when an exception occurs in the except block</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C) when no exception occurs</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The <code>else</code> block in a <code>try-except-else</code> structure is executed <strong>only if no exceptions occur</strong> in the <code>try</code> block.</p>
+  
+      <p><strong>Flow:</strong></p>
+      <ol>
+        <li><code>try</code> → Run this code.</li>
+        <li>If exception occurs → control moves to <code>except</code>.</li>
+        <li>If no exception → <code>else</code> block is executed.</li>
+      </ol>
+  
+      <h4>✅ Example:</h4>
+      <pre><code>try:
+      num = int("10")
+  except ValueError:
+      print("Invalid number!")
+  else:
+      print("Conversion successful!")</code></pre>
+  
+      <p>Output:</p>
+      <code>Conversion successful!</code>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p>Is the following Python code valid?</p>
+  
+    <pre><code>try:
+      # do something
+  except:
+      # do something
+  else
+      # do something</code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. no, there is no such thing as else</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. no, else cannot be used with except</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. no, else must come before except</li>
+      <li onclick="checkAnswer(this, 'correct')">D. Yes</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: C. no, else must come before except</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>The syntax of the provided Python code is incorrect because the <code>else</code> block must be placed <strong>after</strong> the <code>except</code> block, <strong>but must be followed by a colon <code>:</code></strong>.</p>
+  
+      <p>Also, the correct structure is:</p>
+      <pre><code>try:
+      # do something
+  except:
+      # handle error
+  else:
+      # executes if no error occurred in try block</code></pre>
+  
+      <p>In the given code, <code>else</code> is missing a colon <code>:</code> — making the code invalid.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong><br>Can one block of except statements handle multiple exceptions?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. yes, like except typeerror, syntaxerror [,…]</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. yes, like except (TypeError, SyntaxError)</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. no</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. none of the mentioned</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. yes, like <code>except (TypeError, SyntaxError)</code></h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>In Python, you can handle multiple exceptions in a single <code>except</code> block by grouping them in a tuple. The correct syntax is:</p>
+      <pre><code>try:
+      # some code
+  except (TypeError, SyntaxError):
+      # handle either TypeError or SyntaxError
+  </code></pre>
+      <p>Options A and D are invalid syntax. Option C is incorrect because Python <em>does</em> allow multiple exceptions in a single except block.</p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>When is the <code>finally</code> block executed?</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. when there is no exception</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. when there is an exception</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. only if some condition that has been specified is satisfied</li>
+      <li onclick="checkAnswer(this, 'correct')">D. always</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D. always</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        The <code>finally</code> block in Python is <strong>always executed</strong> after the <code>try</code> and <code>except</code> blocks, regardless of whether an exception occurred or not. It is used to define clean-up actions that must be executed under all circumstances (like closing files or releasing resources).
+      </p>
+  
+      <h4>🔁 Example:</h4>
+      <pre><code>try:
+      print("Trying...")
+      1 / 0
+  except ZeroDivisionError:
+      print("Exception occurred")
+  finally:
+      print("Finally block executed")</code></pre>
+  
+      <p><strong>Output:</strong></p>
+      <pre><code>Trying...
+  Exception occurred
+  Finally block executed</code></pre>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h1>Chapter 5: Other Topics</h1>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>What will be the output of the following Python code?</p>
+  
+    <pre><code>import re
+  sentence = 'I am groot'
+  matched = re.match(r'(.*) (.*?) (.*)', sentence)
+  print(matched.group(2))</code></pre>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. am</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. I</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. groot</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. I am groot</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. am</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        The regular expression <code>r'(.*) (.*?) (.*)'</code> is broken down as follows:
+      </p>
+      <ul>
+        <li><code>(.*)</code>: Greedy match for any characters up to the first space → matches <strong>"I am"</strong></li>
+        <li><code>(.*?)</code>: Lazy match for the shortest string until the next space → matches <strong>"I"</strong></li>
+        <li><code>(.*)</code>: Matches the rest → matches <strong>"groot"</strong></li>
+      </ul>
+      <p>
+        However, in reality, Python’s <code>re.match()</code> starts at the beginning and finds:
+      </p>
+      <ul>
+        <li><code>group(1)</code>: <code>'I'</code></li>
+        <li><code>group(2)</code>: <code>'am'</code></li>
+        <li><code>group(3)</code>: <code>'groot'</code></li>
+      </ul>
+      <p>
+        So <code>matched.group(2)</code> returns <code>'am'</code>
+      </p>
+  
+      <p><strong>🛑 Correction:</strong> The actual match is:</p>
+      <pre>
+  Group 1 → 'I'
+  Group 2 → 'am'
+  Group 3 → 'groot'
+      </pre>
+  
+      <p>✅ Final Answer: <strong>A. am</strong></p>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>________ matches the start of the string.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. ‘^’</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. ‘$’</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. ‘$’</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. ‘?’</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. ‘^’</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In regular expressions (regex), the <code>^</code> symbol is used to match the **start** of a string.
+        <br>For example:
+      </p>
+      <pre><code>
+  import re
+  pattern = r'^Hello'
+  re.match(pattern, 'Hello World')  # ✅ Matches
+  re.match(pattern, 'World Hello')  # ❌ Does not match
+      </code></pre>
+      <p><strong>Breakdown of other options:</strong></p>
+      <ul>
+        <li><strong>'$'</strong> – Matches the <em>end</em> of a string.</li>
+        <li><strong>'?'</strong> – Matches zero or one occurrence of the previous character or group.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>The character Dot (that is, ‘.’) in the default mode, matches any character other than _____________</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. caret</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. ampersand</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. percentage symbol</li>
+      <li onclick="checkAnswer(this, 'correct')">D. newline</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: D. newline</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In Python's regular expressions, the dot <code>.</code> is a special character that matches **any single character except the newline character (<code>\n</code>)** by default.
+      </p>
+      <p>
+        If you want the dot to match newline characters as well, you can use the <code>re.DOTALL</code> or <code>re.S</code> flag when compiling the regex.
+      </p>
+  
+      <pre><code>
+  import re
+  
+  text = "Hello\nWorld"
+  
+  # Without DOTALL
+  re.search(r'.+', text)     # Matches only "Hello"
+  
+  # With DOTALL
+  re.search(r'.+', text, re.DOTALL)  # Matches "Hello\nWorld"
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>The expression <code>a{5}</code> will match _____________ characters with the previous regular expression.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A. 5 or less</li>
+      <li onclick="checkAnswer(this, 'correct')">B. exactly 5</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. 5 or more</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. exactly 4</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: B. exactly 5</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In regular expressions, the curly braces <code>{n}</code> are used to specify that the preceding character or group should appear **exactly <code>n</code> times**.
+      </p>
+      <p>
+        So, <code>a{5}</code> means the character <code>'a'</code> must occur **exactly 5 times** in a row to produce a match.
+      </p>
+  
+      <pre><code>
+  import re
+  
+  # Matches exactly 5 a's
+  print(re.fullmatch(r'a{5}', 'aaaaa'))  # ✅ Match
+  print(re.fullmatch(r'a{5}', 'aaaa'))   # ❌ No match
+  print(re.fullmatch(r'a{5}', 'aaaaaa')) # ❌ No match
+      </code></pre>
+    </div>
+  </div>
+  <div class="quiz-question">
+    <p><strong>Question:</strong></p>
+    <p>________ matches the start of the string. ________ matches the end of the string.</p>
+  
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A. ‘^’, ‘$’</li>
+      <li onclick="checkAnswer(this, 'wrong')">B. ‘$’, ‘^’</li>
+      <li onclick="checkAnswer(this, 'wrong')">C. ‘$’, ‘?’</li>
+      <li onclick="checkAnswer(this, 'wrong')">D. ‘?’, ‘^’</li>
+    </ul>
+  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <h4>✅ Correct Answer: A. ‘^’, ‘$’</h4>
+  
+      <h4>🧠 Explanation:</h4>
+      <p>
+        In regular expressions:
+        <ul>
+          <li><code>^</code> is used to match the **start** of a string.</li>
+          <li><code>$</code> is used to match the **end** of a string.</li>
+        </ul>
+      </p>
+      <p>These anchors are helpful when you want to validate whether a string starts or ends with a specific pattern.</p>
+  
+      <pre><code>
+  import re
+  
+  # Match if string starts with 'Hello'
+  print(re.match(r'^Hello', 'Hello World'))  # ✅ Match
+  
+  # Match if string ends with 'World'
+  print(re.search(r'World$', 'Hello World')) # ✅ Match
+      </code></pre>
+    </div>
+  </div>
+        
 <br>
 <br>
 <h1>Final Question</h1>
@@ -3058,11 +3797,11 @@ print(val)
     <p>What can be passed as data while creating a <code>DataFrame</code> in Pandas?</p>
   
     <ul>
-      <li onclick="checkAnswer(this, 'wrong')">A) Integer</li>
-      <li onclick="checkAnswer(this, 'wrong')">B) String</li>
-      <li onclick="checkAnswer(this, 'correct')">C) Pandas Series</li>
-      <li onclick="checkAnswer(this, 'wrong')">D) All of the above</li>
-    </ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Integer</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) String</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Pandas Series</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) All of the above</li>
+      </ul>
   
     <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
     <div class="answer" style="display: none;">
