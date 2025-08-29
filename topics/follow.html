@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Follow - Student Contributions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      animation: containerSlide 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    @keyframes containerSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #fff, #a3bded);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: titleGlow 2s infinite alternate;
+    }
+    
+    @keyframes titleGlow {
+      from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+      to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+      }
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 1s 0.5s forwards;
+      opacity: 0;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 0.9;
+      }
+    }
+    
+    .social-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: cardAppear 0.8s forwards;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    
+    .card:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    
+    .card:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    
+    @keyframes cardAppear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+      transform: rotate(45deg);
+      z-index: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .card:hover::before {
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+    
+    .card-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .icon-container {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      position: relative;
+      animation: iconPulse 2s infinite alternate;
+    }
+    
+    @keyframes iconPulse {
+      from {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+      }
+      to {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+      }
+    }
+    
+    .instagram .icon-container {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+    
+    .youtube .icon-container {
+      background: linear-gradient(45deg, #ff0000, #ff5e3a);
+    }
+    
+    .github .icon-container {
+      background: linear-gradient(45deg, #333, #6e5494);
+    }
+    
+    .icon {
+      font-size: 3.5rem;
+      color: white;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+    }
+    
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card p {
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #6a11cb;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+      transition: all 0.5s ease;
+    }
+    
+    .btn:hover::before {
+      left: 100%;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background: #fff;
+    }
+    
+    .btn i {
+      margin-right: 8px;
+    }
+    
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    
+    .contributions {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 30px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s 1s forwards;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .contributions::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
+      background-size: 200% 100%;
+      animation: gradientMove 3s infinite linear;
+    }
+    
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+    
+    .contributions h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    .contributions p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+    }
+    
+    .highlight {
+      background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 600;
+      padding: 0 4px;
+    }
+    
+    .floating-icons {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .floating-icon {
+      position: absolute;
+      opacity: 0.1;
+      font-size: 2rem;
+      animation: float 15s infinite linear;
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(10px, 15px) rotate(5deg);
+      }
+      50% {
+        transform: translate(0, 30px) rotate(0deg);
+      }
+      75% {
+        transform: translate(-10px, 15px) rotate(-5deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      .card {
+        padding: 20px;
+        max-width: 100%;
+      }
+      
+      .icon-container {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .icon {
+        font-size: 2.5rem;
+      }
+      
+      .social-cards {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-icons">
+    <div class="floating-icon" style="top: 10%; left: 5%;"><i class="fab fa-instagram"></i></div>
+    <div class="floating-icon" style="top: 20%; right: 7%;"><i class="fab fa-youtube"></i></div>
+    <div class="floating-icon" style="bottom: 30%; left: 8%;"><i class="fab fa-github"></i></div>
+    <div class="floating-icon" style="bottom: 20%; right: 10%;"><i class="fas fa-star"></i></div>
+    <div class="floating-icon" style="top: 50%; left: 12%;"><i class="fas fa-graduation-cap"></i></div>
+    <div class="floating-icon" style="bottom: 40%; right: 5%;"><i class="fas fa-share-alt"></i></div>
+  </div>
+  
+  <div class="container">
+    <header>
+      <h1>🧠 Follow and Subscribe</h1>
+      <p class="subtitle">Join our community of learners and contributors. Follow us on social media to stay updated with the latest content and opportunities!</p>
+    </header>
+    
+    <div class="social-cards">
+      <div class="card instagram">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fab fa-instagram icon"></i>
+          </div>
+          <h2>Instagram</h2>
+          <p>Follow us on Instagram for daily updates, stories, and behind-the-scenes content. Connect with our community of students and educators!</p>
+          <div class="btn-container">
+            <a href="https://www.instagram.com/akarjlive/" class="btn" target="_blank">
+              <i class="fab fa-instagram"></i> Follow @akarjlive
+            </a>
+            <a href="https://www.instagram.com/anvija_priwaj/" class="btn" target="_blank">
+              <i class="fab fa-instagram"></i> Follow @anvija_priwaj
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card youtube">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fab fa-youtube icon"></i>
+          </div>
+          <h2>YouTube</h2>
+          <p>Subscribe to our YouTube channel for educational content, tutorials, live sessions, and more. Don't forget to hit the bell icon for notifications!</p>
+          <a href="https://www.youtube.com/@AkaRJLive" class="btn" target="_blank">
+            <i class="fab fa-youtube"></i> Subscribe to @AkaRJLive
+          </a>
+        </div>
+      </div>
+      
+      <div class="card github">
+        <div class="card-content">
+          <div class="icon-container">
+            <i class="fab fa-github icon"></i>
+          </div>
+          <h2>GitHub</h2>
+          <p>Explore our GitHub repositories for code examples, projects, and open-source contributions. Follow to stay updated with our latest developments!</p>
+          <a href="https://github.com/Aman-0402" class="btn" target="_blank">
+            <i class="fab fa-github"></i> Follow @Aman-0402
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contributions">
+      <h2>Student Contributions</h2>
+      <p>We value our student community and their contributions! By following and engaging with our content, you're helping to build a vibrant learning ecosystem.</p>
+      <p>Students can contribute by <span class="highlight">sharing ideas, creating content, participating in discussions, and supporting peers</span> in their educational journey.</p>
+      <p>Your engagement helps us create better resources and foster a community of collaborative learning. Together we can achieve more!</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add more floating icons dynamically
+      const floatingIcons = document.querySelector('.floating-icons');
+      const icons = ['fas fa-comment', 'fas fa-thumbs-up', 'fas fa-book', 'fas fa-lightbulb', 'fas fa-users', 'fab fa-github'];
+      
+      for (let i = 0; i < 10; i++) {
+        const icon = document.createElement('div');
+        icon.className = 'floating-icon';
+        icon.innerHTML = `<i class="${icons[Math.floor(Math.random() * icons.length)]}"></i>`;
+        icon.style.top = Math.random() * 100 + '%';
+        icon.style.left = Math.random() * 100 + '%';
+        icon.style.animationDelay = Math.random() * 15 + 's';
+        icon.style.animationDuration = (15 + Math.random() * 10) + 's';
+        floatingIcons.appendChild(icon);
+      }
+      
+      // Enhanced button hover effect
+      const buttons = document.querySelectorAll('.btn');
+      
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', function(e) {
+          const x = e.pageX - this.offsetLeft;
+          const y = e.pageY - this.offsetTop;
+          
+          this.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,1), rgba(255,255,255,0.9))`;
+        });
+        
+        button.addEventListener('mouseleave', function() {
+          this.style.background = 'rgba(255, 255, 255, 0.9)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
