@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS student (
     </li>
     <li><strong>Insert data</strong><br>
       <pre><code>cur.execute("INSERT INTO student (name, grade) VALUES (?, ?)", ("Aman", 95))
-cur.execute("INSERT INTO student (name, grade) VALUES (?, ?)", ("Riya", 88))
+cur.execute("INSERT INTO student (name, grade) VALUES (?, ?)", ("Preet", 88))
 conn.commit()</code></pre>
     </li>
     <li><strong>Read data</strong><br>
@@ -88,7 +88,7 @@ for row in rows:
     print(row)</code></pre>
     </li>
     <li><strong>Update data</strong><br>
-      <pre><code>cur.execute("UPDATE student SET grade = 92 WHERE name = 'Riya'")
+      <pre><code>cur.execute("UPDATE student SET grade = 92 WHERE name = 'Preet'")
 conn.commit()</code></pre>
     </li>
     <li><strong>Delete data</strong><br>
@@ -127,12 +127,12 @@ CREATE TABLE IF NOT EXISTS student (
 ''')
 
 # Insert
-cur.execute("INSERT INTO student (name, grade) VALUES (?, ?)", ("Riya", 88))
+cur.execute("INSERT INTO student (name, grade) VALUES (?, ?)", ("Preet", 88))
 cur.execute("INSERT INTO student (name, grade) VALUES (?, ?)", ("Aman", 95))
 conn.commit()
 
 # Update
-cur.execute("UPDATE student SET grade = 92 WHERE name = 'Riya'")
+cur.execute("UPDATE student SET grade = 92 WHERE name = 'Preet'")
 conn.commit()
 
 # Delete
